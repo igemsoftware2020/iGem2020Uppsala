@@ -19,6 +19,4 @@ ml ABINIT/8.10.3 Armadillo/9.700.2 CDO/1.9.5 GOTM/5.3-221-gac7ec88d NCO/4.8.1 NC
 
 ml gromacs/2019.6.th
 
-gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr
-
-gmx mdrun -deffnm nvt
+gmx mdrun -nt 8 -v -deffnm em

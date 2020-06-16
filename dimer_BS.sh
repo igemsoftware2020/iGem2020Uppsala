@@ -2,7 +2,7 @@
 #project name
 #SBATCH -A g2020015
 #specify job name
-#SBATCH -J SM_HSP_dimer
+#SBATCH -J YOURJOBNAME
 #set places for error and output files
 #SBATCH --error=job.%j.err
 #SBATCH --output=job.%j.out

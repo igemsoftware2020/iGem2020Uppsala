@@ -9,7 +9,7 @@
 #request a certain number of hours for the run HR:MIN:SEC
 #SBATCH -t 24:00:00
 # specify number of cores you want
-#SBATCH -n 18
+#SBATCH -n 20
 # specify number of threads per task
 #SBATCH -c 1
 
@@ -21,4 +21,4 @@ ml gromacs/2019.6.th
 
 gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr
 
-gmx mdrun -nt 18 -deffnm md_0_1
+gmx mdrun -nt 20 -deffnm md_0_1

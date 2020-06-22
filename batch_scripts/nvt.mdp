@@ -11,11 +11,11 @@ nstenergy               = 500       ; save energies every 1.0 ps
 nstlog                  = 500       ; update log file every 1.0 ps
 ; Bond parameters
 continuation            = no        ; first dynamics run
-constraint_algorithm    = lincs     ; holonomic constraints 
+constraint_algorithm    = lincs     ; holonomic constraints
 constraints             = h-bonds   ; bonds involving H are constrained
 lincs_iter              = 1         ; accuracy of LINCS
 lincs_order             = 4         ; also related to accuracy
-; Nonbonded settings 
+; Nonbonded settings
 cutoff-scheme           = Verlet    ; Buffered neighbor searching
 ns_type                 = grid      ; search neighboring grid cells
 nstlist                 = 10        ; 20 fs, largely irrelevant with Verlet

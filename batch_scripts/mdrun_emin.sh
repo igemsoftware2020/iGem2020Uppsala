@@ -9,7 +9,7 @@
 #request a certain number of hours for the run HR:MIN:SEC
 #SBATCH -t 01:00:00
 # specify number of cores you want
-#SBATCH -n 8
+#SBATCH -n 20
 # specify number of threads per task
 #SBATCH -c 1
 
@@ -19,4 +19,4 @@ ml ABINIT/8.10.3 Armadillo/9.700.2 CDO/1.9.5 GOTM/5.3-221-gac7ec88d NCO/4.8.1 NC
 
 ml gromacs/2019.6.th
 
-gmx mdrun -nt 8 -v -deffnm em
+gmx mdrun -nt 20 -v -deffnm em

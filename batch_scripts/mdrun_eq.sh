@@ -9,7 +9,7 @@
 #request a certain number of hours for the run HR:MIN:SEC
 #SBATCH -t 02:00:00
 # specify number of cores you want
-#SBATCH -n 18
+#SBATCH -n 20
 # specify number of threads per task
 #SBATCH -c 1
 

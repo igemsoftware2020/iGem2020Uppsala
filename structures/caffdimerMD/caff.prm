@@ -1,0 +1,30 @@
+
+[ bondtypes ]
+;      i        j  func           b0           kb
+  CG2RC0   NG2R61     1   0.13790000    317984.00
+
+
+[ angletypes ]
+;      i        j        k  func       theta0       ktheta          ub0          kub
+  CG2R63   CG2RC0   NG2R51     5   132.600000  1087.840000   0.00000000         0.00
+  CG2RC0   CG2RC0   NG2R61     5   127.400000   502.080000   0.00000000         0.00
+  NG2R50   CG2RC0   NG2R61     5   122.600000   167.360000   0.00000000         0.00
+  CG2R63   NG2R61   CG2RC0     5   123.900000    83.680000   0.00000000         0.00
+  CG2RC0   NG2R61    CG331     5   120.500000   585.760000   0.00000000         0.00
+
+
+[ dihedraltypes ]
+;      i        j        k        l  func         phi0         kphi  mult
+  NG2R61   CG2R63   CG2RC0   NG2R51     9   180.000000     8.368000     2
+   OG2D4   CG2R63   CG2RC0   NG2R51     9   180.000000     0.000000     2
+  CG2RC0   CG2R63   NG2R61   CG2R63     9   180.000000     0.836800     2
+   OG2D4   CG2R63   NG2R61   CG2RC0     9   180.000000     6.694400     2
+  CG2R63   CG2RC0   CG2RC0   NG2R50     9   180.000000     6.276000     2
+  CG2R63   CG2RC0   CG2RC0   NG2R61     9   180.000000     8.368000     2
+  NG2R51   CG2RC0   CG2RC0   NG2R61     9   180.000000    35.564000     2
+  NG2R61   CG2RC0   NG2R50   CG2R53     9   180.000000     8.368000     2
+  CG2R63   CG2RC0   NG2R51   CG2R53     9   180.000000    79.496000     2
+  CG2R63   CG2RC0   NG2R51    CG331     9   180.000000    46.024000     2
+  CG2RC0   CG2RC0   NG2R61   CG2R63     9   180.000000     2.092000     2
+  NG2R50   CG2RC0   NG2R61   CG2R63     9   180.000000     0.627600     2
+    HGA3    CG331   NG2R61   CG2RC0     9     0.000000     0.000000     3

@@ -1,0 +1,59 @@
+;
+;	File 'topol.top' was generated
+;	By user: sebasm (4015338)
+;	On host: rackham3.uppmax.uu.se
+;	At date: Wed Jun 24 10:17:47 2020
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                    :-) GROMACS - gmx pdb2gmx, 2019.6 (-:
+;
+;	Executable:   /sw/apps/gromacs/2019.6.th/rackham/bin/gmx
+;	Data prefix:  /sw/apps/gromacs/2019.6.th/rackham
+;	Working dir:  /domus/h1/sebasm/GROMACS/protlig
+;	Command line:
+;	  gmx pdb2gmx -f caffdimer_clean.pdb -o caffdimer_processed.gro -ignh
+;	Force field was read from current directory or a relative path - path added.
+;
+
+; Include forcefield parameters
+#include "./charmm36-mar2019.ff/forcefield.itp"
+
+; Include ligand parameters
+#include "caff.prm"
+
+; Include chain topologies
+#include "topol_Protein_chain_A.itp"
+#include "topol_Protein_chain_C.itp"
+
+; Include ligand topology
+#include "caff.itp"
+; Ligand position restraints
+#ifdef POSRES
+#include "posre_caff.itp"
+#endif
+; Include water topology
+#include "./charmm36-mar2019.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "./charmm36-mar2019.ff/ions.itp"
+
+[ system ]
+; Name
+CAFFEINE RECOGNIZING NANOBODY in water
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     1
+Protein_chain_C     1
+caff                1
+SOL         11180
+CL               6

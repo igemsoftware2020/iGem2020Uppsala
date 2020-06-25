@@ -12,6 +12,8 @@
 #SBATCH -n 20
 # specify number of threads per task
 #SBATCH -c 1
+#SBATCH --mail-user=YOUREMAIL
+#SBATCH --mail-type=END,FAIL
 
 # It is always best to do a ml purge before loading modules in a submit file
 ml purge

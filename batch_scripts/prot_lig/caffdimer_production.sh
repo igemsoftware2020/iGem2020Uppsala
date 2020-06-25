@@ -1,6 +1,6 @@
 #!/bin/bash
 #project name
-#SBATCH -A g2020015
+#SBATCH -A youraccount
 #specify job name
 #SBATCH -J SM_caffdimer_production
 #set places for error and output files

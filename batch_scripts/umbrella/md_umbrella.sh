@@ -1,6 +1,6 @@
 #!/bin/bash
 #project name
-#SBATCH -A g2020015
+#SBATCH -A YOURGROUPNAME
 #specify job name
 #SBATCH -J SM_umbrella_production
 #set places for error and output files

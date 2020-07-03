@@ -59,10 +59,10 @@ pull_group2_name        = Chain_B
 pull_coord1_type        = umbrella  ; harmonic potential
 pull_coord1_geometry    = distance  ; simple distance increase
 pull_coord1_dim         = N N Y
-pull_coord1_groups      = 1 2
+pull_coord1_groups      = 2 1
 pull_coord1_start       = yes       ; define initial COM distance > 0
 pull_coord1_rate        = 0.01      ; 0.01 nm per ps = 10 nm per ns
 pull_coord1_k           = 1000      ; kJ mol^-1 nm^-2
-pull_group1_pbcatom     = 1939    ;choosing the pull_group1_pbcatom
-pull_group2_pbcatom     = 605
+pull_group1_pbcatom     = 2262    ;choosing the pull_group1_pbcatom
+pull_group2_pbcatom     = 315
 pull-pbc-ref-prev-step-com = yes

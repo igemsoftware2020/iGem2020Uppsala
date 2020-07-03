@@ -1,6 +1,10 @@
 #!/bin/bash
 #project name
+<<<<<<< HEAD
 #SBATCH -A YOURPROJECTNAME
+=======
+#SBATCH -A YOURGROUPNAME
+>>>>>>> 3360860ffc7763b372eb2a79431158d72d22fee9
 #specify job name
 #SBATCH -J SM_umbrella_production
 #set places for error and output files

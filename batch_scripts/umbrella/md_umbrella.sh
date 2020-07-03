@@ -1,6 +1,6 @@
 #!/bin/bash
 #project name
-#SBATCH -A g2020015
+#SBATCH -A YOURPROJECTNAME
 #specify job name
 #SBATCH -J SM_umbrella_production
 #set places for error and output files
@@ -40,4 +40,4 @@ fi
 # to avoid complaints from GROMACS
 export OMP_NUM_THREADS=$ntomp
 
-$MPIRUN $GMX mdrun $ntmpi -ntomp $ntomp -deffnm pull -pf pull.xvg -px pullx.xvg
+$MPIRUN $GMX mdrun $ntmpi -ntomp $ntomp -deffnm pull -pf pullf.xvg -px pullx.xvg

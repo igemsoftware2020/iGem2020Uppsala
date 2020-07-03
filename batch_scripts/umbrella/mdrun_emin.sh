@@ -1,6 +1,6 @@
 #!/bin/bash
 #project name
-#SBATCH -A YOURGROUPNAME
+#SBATCH -A youraccount
 #specify job name
 #SBATCH -J SM_emin_umbrella
 #set places for error and output files
@@ -12,7 +12,6 @@
 #SBATCH -n 10
 # specify number of threads per task
 #SBATCH -c 1
-
 
 # It is always best to do a ml purge before loading modules in a submit file
 ml purge

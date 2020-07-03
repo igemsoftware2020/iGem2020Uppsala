@@ -1,6 +1,6 @@
 #!/bin/bash
 #project name
-#SBATCH -A YOURGROUPNAME
+#SBATCH -A youraccount
 #specify job name
 #SBATCH -J SM_eq_npt_umbrella
 #set places for error and output files

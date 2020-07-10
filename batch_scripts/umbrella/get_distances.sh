@@ -12,18 +12,19 @@
 #    Contact: jalemkul@vt.edu
 #
 #################################################
+ml gromacs
 
-echo 0 | gmx trjconv -s pull.tpr -f pull.xtc -o conf.gro -sep
+echo 0 | gmx trjconv -s pull2.tpr -f pull2.xtc -o conf.gro -sep
 
 # compute distances
-for (( i=0; i<501; i++ ))
+for (( i=2; i<2999; i++ ))
 do
-    gmx distance -s pull.tpr -f conf${i}.gro -n index.ndx -select 'com of group "Chain_A" plus com of group "Chain_B"' -oall dist${i}.xvg 
+  gmx distance -s pull2.tpr -f conf${i}.gro -n index.ndx -select "com of group 19 plus com of group 20" -oall dist${i}.xvg
 done
 
 # compile summary
 touch summary_distances.dat
-for (( i=0; i<501; i++ ))
+for (( i=0; i<3000; i++ ))
 do
     d=`tail -n 1 dist${i}.xvg | awk '{print $2}'`
     echo "${i} ${d}" >> summary_distances.dat

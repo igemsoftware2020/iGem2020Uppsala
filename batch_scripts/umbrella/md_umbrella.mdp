@@ -4,7 +4,7 @@ define      = -DPOSRES_B
 integrator  = md
 dt          = 0.002
 tinit       = 0
-nsteps      = 5000000   ; 10 ns
+nsteps      = 5000000   ; 1 ns
 nstcomm     = 10
 ; Output parameters
 nstxout-compressed  = 5000      ; every 10 ps
@@ -55,7 +55,7 @@ pull_group1_name        = Chain_A
 pull_group2_name        = Chain_B
 pull_coord1_type        = umbrella  ; harmonic potential
 pull_coord1_geometry    = distance  ; simple distance increase
-pull_coord1_dim         = N N Y
+pull_coord1_dim         = Y N N
 pull_coord1_groups      = 2 1
 pull_coord1_start       = yes       ; define initial COM distance > 0
 pull_coord1_rate        = 0     ; hold in place

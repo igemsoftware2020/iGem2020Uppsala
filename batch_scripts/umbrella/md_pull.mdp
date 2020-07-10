@@ -58,7 +58,7 @@ pull_group1_name        = Chain_A
 pull_group2_name        = Chain_B
 pull_coord1_type        = umbrella  ; harmonic potential
 pull_coord1_geometry    = distance  ; simple distance increase
-pull_coord1_dim         = N N Y
+pull_coord1_dim         = Y N N
 pull_coord1_groups      = 2 1
 pull_coord1_start       = yes       ; define initial COM distance > 0
 pull_coord1_rate        = 0.01      ; 0.01 nm per ps = 10 nm per ns

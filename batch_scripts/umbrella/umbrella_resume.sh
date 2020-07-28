@@ -1,6 +1,6 @@
 #!/bin/bash
 #project name
-#SBATCH -A youraccount
+#SBATCH -A g2020015
 #specify job name
 #SBATCH -J SM_umbrella_sampling_XXX
 #set places for error and output files
@@ -19,10 +19,6 @@ ml ABINIT/8.10.3 Armadillo/9.700.2 CDO/1.9.5 GOTM/5.3-221-gac7ec88d NCO/4.8.1 NC
 
 ml gromacs/2019.6.th
 
-# Short equilibration
-gmx grompp -f npt_umbrella.mdp -c confXXX.gro -r confXXX.gro -p topol.top -n index.ndx -o nptXXX.tpr -maxwarn 2
-gmx mdrun -deffnm nptXXX
-
 # Umbrella run
-gmx grompp -f md_umbrella.mdp -c nptXXX.gro -r nptXXX.gro -t nptXXX.cpt -p topol.top -n index.ndx -o umbrellaXXX.tpr -maxwarn 2
-gmx mdrun -deffnm umbrellaXXX
+#gmx grompp -f md_umbrella.mdp -c nptXXX.gro -r nptXXX.gro -t nptXXX.cpt -p topol.top -n index.ndx -o umbrellaXXX.tpr -maxwarn 2
+gmx mdrun -deffnm umbrellaXXX -cpi umbrellaxxx.cpt -append

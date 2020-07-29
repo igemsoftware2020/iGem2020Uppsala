@@ -7,11 +7,19 @@
 #SBATCH --error=job.%j.err
 #SBATCH --output=job.%j.out
 #request a certain number of hours for the run HR:MIN:SEC
-#SBATCH -t 24:00:00
+#SBATCH -t 40:00:00
 # specify number of cores you want
 #SBATCH -n 20
 # specify number of threads per task
 #SBATCH -c 1
+
+#ensure your batch file is run from the location that contains all the files
+#produced from previous steps 
+
+#copy files to temp storage
+export srcdir=$HOME/GROMACS/umbrellatest/umbrella3
+cp $srcdir/{md_umbrella.mdp,npt_umbrella.mdp,confXXX.gro,nptXXX.tpr,topol.top,index.ndx} $SNIC_TMP/
+cd $SNIC_TMP
 
 # It is always best to do a ml purge before loading modules in a submit file
 ml purge
@@ -19,10 +27,50 @@ ml ABINIT/8.10.3 Armadillo/9.700.2 CDO/1.9.5 GOTM/5.3-221-gac7ec88d NCO/4.8.1 NC
 
 ml gromacs/2019.6.th
 
+
+# Automatic selection of single or multi node based GROMACS
+if [ $SLURM_JOB_NUM_NODES -gt 1 ]; then
+    GMX="gmx_mpi"
+    MPIRUN="mpirun"
+    ntmpi=""
+else
+    GMX="gmx"
+    MPIRUN=""
+    ntmpi="-ntmpi $SLURM_NTASKS"
+fi
+
+# Automatic selection of ntomp argument based on "-c" argument to sbatch
+if [ -n "$SLURM_CPUS_PER_TASK" ]; then
+    ntomp="$SLURM_CPUS_PER_TASK"
+else
+    ntomp="1"
+fi
+# Make sure to set OMP_NUM_THREADS equal to the value used for ntomp
+# to avoid complaints from GROMACS
+export OMP_NUM_THREADS=$ntomp
+
+
 # Short equilibration
 gmx grompp -f npt_umbrella.mdp -c confXXX.gro -r confXXX.gro -p topol.top -n index.ndx -o nptXXX.tpr -maxwarn 2
-gmx mdrun -deffnm nptXXX
+$MPIRUN $GMX mdrun $ntmpi -ntomp $ntomp -deffnm nptXXX
+
+cp nptXXX.gro $srcdir/nptXXX.gro
+cp nptXXX.cpt $srcdir/nptXXX.cpt
+cp nptXXX.xtc $srcdir/nptXXX.xtc
+cp nptXXX.edr $srcdir/nptXXX.edr
+cp nptXXX.log $srcdir/nptXXX.log
 
 # Umbrella run
 gmx grompp -f md_umbrella.mdp -c nptXXX.gro -r nptXXX.gro -t nptXXX.cpt -p topol.top -n index.ndx -o umbrellaXXX.tpr -maxwarn 2
-gmx mdrun -deffnm umbrellaXXX
+$MPIRUN $GMX mdrun $ntmpi -ntomp $ntomp -deffnm umbrellaXXX
+
+#copy files back to your directory
+cp job.%j.err $srcdir/job.%j.err
+cp job.%j.out $srcdir/job.%j.out
+cp umbrellaXXX.cpt $srcdir/umbrellaXXX_2.cpt
+cp umbrellaXXX_prev.cpt $srcdir/umbrellaXXX_prev2.cpt
+cp umbrellaXXX.xtc $srcdir/umbrellaXXX_2.xtc
+cp umbrellaXXX.edr $srcdir/umbrellaXXX_2.edr
+cp umbrellaXXX.log $srcdir/umbrellaXXX_2.log
+cp umbrellaXXX_pullx.xvg $srcdir/umbrellaXXX_pullx_2.xvg
+cp umbrellaXXX_pullf.xvg $srcdir/umbrellaXXX_pullf_2.xvg

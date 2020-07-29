@@ -4,7 +4,7 @@ define      = -DPOSRES_B
 integrator  = md
 dt          = 0.002
 tinit       = 0
-nsteps      = 5000000   ; 1 ns
+nsteps      = 5000000   ; 10 ns
 nstcomm     = 10
 ; Output parameters
 nstxout-compressed  = 5000      ; every 10 ps

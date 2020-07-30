@@ -9,10 +9,10 @@
 #specify job name
 #SBATCH -J SM_umbrella_sampling_XXX
 #set places for error and output files
-#SBATCH --error=job.%j.err
-#SBATCH --output=job.%j.out
+#SBATCH --error=job.%jumbrella_sampling_XXX.err
+#SBATCH --output=job.%jumbrella_sampling_XXX.out
 #request a certain number of hours for the run HR:MIN:SEC
-#SBATCH -t 24:00:00
+#SBATCH -t 36:00:00
 # specify number of cores you want
 #SBATCH -n 20
 # specify number of threads per task

@@ -40,4 +40,5 @@ fi
 # to avoid complaints from GROMACS
 export OMP_NUM_THREADS=$ntomp
 
+gmx grompp -f md_pull.mdp -c npt.gro -p topol.top -r npt.gro -n index.ndx -t npt.cpt -o pull.tpr
 $MPIRUN $GMX mdrun $ntmpi -ntomp $ntomp -deffnm pull -pf pullf.xvg -px pullx.xvg

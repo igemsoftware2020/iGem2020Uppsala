@@ -2,7 +2,7 @@
 #project name
 #SBATCH -A youraccount
 #specify job name
-#SBATCH -J SM_npt_umbrella
+#SBATCH -J SM_emin_umbrella
 #set places for error and output files
 #SBATCH --error=job.%j.err
 #SBATCH --output=job.%j.out
@@ -19,5 +19,5 @@ ml ABINIT/8.10.3 Armadillo/9.700.2 CDO/1.9.5 GOTM/5.3-221-gac7ec88d NCO/4.8.1 NC
 
 ml gromacs/2019.6.th
 
-gmx grompp -f npt.mdp -c em.gro -p topol.top -r em.gro -o npt.tpr -maxwarn 3
-gmx mdrun -nt 10 -v -deffnm npt
+gmx grompp -f minim.mdp -c solv_ions.gro -p topol.top -o em.tpr 
+gmx mdrun -nt 10 -v -deffnm em

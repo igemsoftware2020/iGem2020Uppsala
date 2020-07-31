@@ -62,13 +62,11 @@ cp nptXXX.log $srcdir/nptXXX.log
 
 # Umbrella run
 gmx grompp -f md_umbrella.mdp -c nptXXX.gro -r nptXXX.gro -t nptXXX.cpt -p topol.top -n index.ndx -o umbrellaXXX.tpr -maxwarn 2
-cp job.%j_umbrella_sampling_XXX.err $srcdir/job.%jumbrella_sampling_XXX.err
-cp job.%j_umbrella_sampling_XXX.out $srcdir/job.%jumbrella_sampling_XXX.out
 $MPIRUN $GMX mdrun $ntmpi -ntomp $ntomp -deffnm umbrellaXXX
 
 #copy files back to your directory
-cp job.%j_umbrella_sampling_XXX.err $srcdir/job.%jumbrella_sampling_XXX.err
-cp job.%j_umbrella_sampling_XXX.out $srcdir/job.%jumbrella_sampling_XXX.out
+cp *.err $srcdir/job.%jumbrella_sampling_XXX.err
+cp *.out $srcdir/job.%jumbrella_sampling_XXX.out
 cp umbrellaXXX.cpt $srcdir/umbrellaXXX_2.cpt
 cp umbrellaXXX_prev.cpt $srcdir/umbrellaXXX_prev2.cpt
 cp umbrellaXXX.xtc $srcdir/umbrellaXXX_2.xtc

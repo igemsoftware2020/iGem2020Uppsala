@@ -1,0 +1,25 @@
+# - Solution Number, according to the order of the input transformations (option 1) or models (option 2)
+glob - Global Energy, the binding energy of the solution
+aVdW, rVdW - softened attractive and repulsive van der Waals energy
+ACE - atomic contact energy (ACE)
+inside - insideness measure
+aElec,rElec - attractive and repulsive short-range Coulomb electrostatics
+laElec, lrElec - attractive and repulsive long-range Coulomb electrostatics
+HB - hydrogen and disulfide bonds
+piS - PI-PI stacking
+catpiS - cation-PI stacking
+aliph - aliphatic interactions
+Transformation - ligand transformation after refinement
+For details see Andrusier et al. Proteins 2007.
+
+ #      |     glob |     aVdW |     rVdW |      ACE |   inside |    aElec |    rElec |   laElec |   lrElec |       HB |      piS |   catpiS |    aliph |     Transformation
+5	|   -29.97 |   -29.92 |    13.78 |     4.15 |     4.97 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 | -2.444582 0.522739 -0.868847 -179.407761 -68.490173 151.442810
+10	|   -26.26 |   -18.49 |     8.43 |    -1.30 |    16.32 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |    -1.50 |     0.00 |     0.00 | 0.009608 0.472996 -1.816000 28.661060 -129.104187 -177.736679
+9	|   -12.15 |   -26.21 |    14.43 |    11.88 |    12.94 |     0.00 |     0.00 |     0.00 |     0.00 |    -0.41 |     0.00 |     0.00 |     0.00 | -0.710110 0.083473 -1.632967 -131.626160 -32.081463 -182.609436
+4	|   -11.62 |    -8.44 |     1.72 |     0.01 |     7.55 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 | 2.632287 -0.074952 2.739831 -57.008801 -36.554039 225.544983
+1	|     5.36 |   -21.97 |    52.97 |     4.59 |     7.41 |     0.00 |     0.00 |     0.00 |     0.00 |    -0.67 |     0.00 |     0.00 |     0.00 | -2.458748 1.068065 -1.317325 -199.306839 73.615715 90.950974
+7	|   287.25 |   -25.68 |   515.96 |    10.12 |    15.54 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 | -1.072144 -0.987824 1.854303 222.304718 -75.758148 -65.300247
+2	|   358.34 |   -49.97 |   699.88 |     8.35 |     7.79 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 | -1.956992 0.942391 -1.718758 -218.255005 61.208973 51.121456
+6	|  1361.78 |   -43.95 |  2332.63 |    17.58 |     5.38 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 | -2.210038 0.609047 -1.345090 -215.423080 -2.126440 114.638000
+3	|  1563.07 |   -33.68 |  2688.92 |     2.21 |     4.56 |     0.00 |     0.00 |     0.00 |     0.00 |    -1.50 |    -1.50 |     0.00 |     0.00 | -3.128246 -0.167587 -2.479014 -49.513027 21.824348 247.036942
+8	|  2459.13 |   -19.64 |  4139.24 |     3.15 |    21.78 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 |     0.00 | 2.576861 -0.760233 1.421619 -74.519417 146.419312 158.158401

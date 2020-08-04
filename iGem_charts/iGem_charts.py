@@ -13,8 +13,9 @@ from collections import defaultdict
 
 # csv files are available at https://igem.org/Team_List?year=[WRITE YEAR HERE]
 # update the file variable to point to the csv you wish to examine
-# as is this script would look for a 2019 team list downloaded on August 8 2020
-file = '/Downloads/2019__team_list__2020-08-04.csv'
+# as is this script looks for a 2019 team list downloaded on August 4 2020
+# this script also assumes that file is in the current working directory
+file = '2019__team_list__2020-08-04.csv'
 
 #data import
 team_data = pd.read_csv(file, sep = ",", header=0)
@@ -29,9 +30,10 @@ team_data = team_data.drop(team_data[(team_data['Track'] == "High School") | (te
 # and then by Track, here called category
 regions = team_data['Region'].unique()
 countries = team_data['Country'].unique()
-categories = ["Environment", "Manufacturing" ,"Diagnostics" ,'Therapeutics',
- "New Application", "Foundational Advance", "Energy" ,"Food & Nutrition",
- "Open" ,"Software"]
+#categories = ["Environment", "Manufacturing" ,"Diagnostics" ,'Therapeutics',
+# "New Application", "Foundational Advance", "Energy" ,"Food & Nutrition",
+# "Open" ,"Software"]
+categories = team_data['Track'].unique()
 category_names = categories
 
 # variables for graphing
@@ -48,6 +50,8 @@ for i in regions:
 
     for i in results:
         total = sum(results[i])
+        if total == 0:
+            total = 1
         percents = list()
         for q in results[i]:
             percents.append(q/total)

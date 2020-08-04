@@ -1,0 +1,361 @@
+Team ID , Team  , Region , Country , Track , Section , Size , Status , Year
+3013,Aachen,Europe,Germany,Environment,Overgrad,13,Accepted,2019
+3016,Aalto-Helsinki,Europe,Finland,Manufacturing,Overgrad,13,Accepted,2019
+2941,Aboa,Europe,Finland,Diagnostics,Overgrad,16,Accepted,2019
+3272,ACIBADEM_ISTANBUL,Asia,Turkey,High School,High_school,18,Accepted,2019
+3244,AFCM-Egypt,Africa,Egypt,Therapeutics,Undergrad,29,Accepted,2019
+2949,AHUT_China,Asia,China,Environment,Undergrad,36,Accepted,2019
+2915,Aix-Marseille,Europe,France,Diagnostics,Overgrad,20,Accepted,2019
+3085,Alabama,North America,United States,Therapeutics,Undergrad,7,Accepted,2019
+2905,Alma,North America,United States,Therapeutics,Undergrad,14,Accepted,2019
+3320,Amazonas-Brazil,Latin America,Brazil,Therapeutics,Undergrad,23,Accepted,2019
+2928,ASIJ_Tokyo,Asia,Japan,High School,High_school,27,Accepted,2019
+3152,ASTWS-China,Asia,China,High School,High_school,23,Accepted,2019
+3201,Athens,Europe,Greece,New Application,Undergrad,20,Accepted,2019
+2975,Auburn_Alabama,North America,United States,High School,High_school,12,Accepted,2019
+3174,Austin_UTexas,North America,United States,Foundational Advance,Undergrad,16,Accepted,2019
+3301,Baltimore_BioCrew,North America,United States,High School,High_school,15,Accepted,2019
+3143,BEAS_China,Asia,China,High School,High_school,20,Accepted,2019
+2938,BGU_Israel,Asia,Israel,New Application,Overgrad,13,Accepted,2019
+3202,BHSF_ND,Asia,China,High School,High_school,15,Accepted,2019
+2926,Bielefeld-CeBiTec,Europe,Germany,Foundational Advance,Overgrad,15,Accepted,2019
+3003,Bilkent-UNAMBG,Europe,Turkey,Therapeutics,Undergrad,14,Accepted,2019
+3000,Bioriidl_Somaiya,Asia,India,Foundational Advance,Undergrad,10,Accepted,2019
+3277,Bio_Without_Borders,North America,United States,High School,High_school,40,Accepted,2019
+3020,BIT,Asia,China,Environment,Undergrad,34,Accepted,2019
+2972,BIT-China,Asia,China,New Application,Undergrad,25,Accepted,2019
+3120,BM-AMU,Asia,China,Foundational Advance,Undergrad,29,Accepted,2019
+2950,BNDS_China,Asia,China,High School,High_school,19,Accepted,2019
+3036,BNU-China,Asia,China,Therapeutics,Undergrad,29,Accepted,2019
+3015,BOKU-Vienna,Europe,Austria,Diagnostics,Overgrad,24,Accepted,2019
+2954,Bonn,Europe,Germany,Energy,Undergrad,24,Accepted,2019
+3226,Botchan_Lab_Tokyo,Asia,Japan,Environment,Undergrad,22,Accepted,2019
+3175,British_Columbia,North America,Canada,Food & Nutrition,Undergrad,21,Accepted,2019
+3236,BrockU,North America,Canada,New Application,Undergrad,19,Accepted,2019
+3260,BrownStanfordPrinctn,North America,United States,Manufacturing,Undergrad,16,Accepted,2019
+3141,BSC_United,Asia,China,High School,High_school,16,Accepted,2019
+3238,BUAP_Mexico,Latin America,Mexico,Environment,Undergrad,18,Accepted,2019
+3197,BUCT-China,Asia,China,Environment,Overgrad,15,Accepted,2019
+3208,Bulgaria,Europe,Bulgaria,Therapeutics,Undergrad,6,Accepted,2019
+3114,Calgary,North America,Canada,Food & Nutrition,Undergrad,18,Accepted,2019
+3220,Canterbury_Chch_NZ,Asia,New Zealand,Food & Nutrition,Undergrad,12,Accepted,2019
+3279,CAU_China,Asia,China,Environment,Undergrad,17,Accepted,2019
+3270,CCA_San_Diego,North America,United States,High School,High_school,13,Accepted,2019
+2927,CCU_Taiwan,Asia,Taiwan,Diagnostics,Undergrad,29,Accepted,2019
+3054,Chalmers-Gothenburg,Europe,Sweden,Environment,Overgrad,9,Accepted,2019
+3214,CLS_CLSG_UK,Europe,United Kingdom,High School,High_school,27,Withdrawn,2019
+2961,CMUQ,Asia,Qatar,Diagnostics,Undergrad,13,Accepted,2019
+2944,Concordia-Montreal,North America,Canada,Diagnostics,Overgrad,19,Accepted,2019
+2960,Cornell,North America,United States,Environment,Undergrad,21,Accepted,2019
+2978,Costa_Rica,Latin America,Costa Rica,Therapeutics,Undergrad,16,Accepted,2019
+2976,CPU_CHINA,Asia,China,Therapeutics,Undergrad,21,Accepted,2019
+3276,CSL_Pittsburgh,North America,United States,High School,High_school,8,Accepted,2019
+2951,CSMU_Taiwan,Asia,Taiwan,Diagnostics,Undergrad,25,Accepted,2019
+2908,CSU_CHINA,Asia,China,Therapeutics,Undergrad,25,Accepted,2019
+3083,CSU_Fort_Collins,North America,United States,Therapeutics,Undergrad,11,Accepted,2019
+3144,CU,Africa,Egypt,Environment,Undergrad,12,Accepted,2019
+3115,CU-Boulder,North America,United States,Therapeutics,Undergrad,7,Accepted,2019
+3130,DNHS_SanDiego,North America,United States,High School,High_school,12,Accepted,2019
+3046,DTU-Denmark,Europe,Denmark,Foundational Advance,Overgrad,13,Accepted,2019
+2924,Duesseldorf,Europe,Germany,Food & Nutrition,Overgrad,17,Accepted,2019
+3060,DUT_China_A,Asia,China,New Application,Undergrad,18,Accepted,2019
+3061,DUT_China_B,Asia,China,New Application,Undergrad,20,Accepted,2019
+3004,East_Chapel_Hill_HS,North America,United States,High School,High_school,14,Accepted,2019
+3093,ECUST_China,Asia,China,Manufacturing,Undergrad,21,Accepted,2019
+2940,Edinburgh_OG,Europe,United Kingdom,Environment,Overgrad,12,Accepted,2019
+2952,Edinburgh_UG,Europe,United Kingdom,Energy,Undergrad,13,Accepted,2019
+2916,EPFL,Europe,Switzerland,Environment,Overgrad,14,Accepted,2019
+3211,ETH_Zurich,Europe,Switzerland,Therapeutics,Overgrad,12,Accepted,2019
+2983,Evry_Paris-Saclay,Europe,France,Manufacturing,Overgrad,16,Accepted,2019
+3039,Exeter,Europe,United Kingdom,Environment,Overgrad,17,Accepted,2019
+2935,FAFU-CHINA,Asia,China,Energy,Undergrad,16,Accepted,2019
+3117,FAU_Erlangen,Europe,Germany,Foundational Advance,Overgrad,30,Accepted,2019
+3082,FDR-HB_Peru,Latin America,Peru,High School,High_school,24,Accepted,2019
+3086,Florida,North America,United States,Foundational Advance,Undergrad,11,Accepted,2019
+3009,Freiburg,Europe,Germany,Foundational Advance,Overgrad,22,Accepted,2019
+3172,FSU,North America,United States,Environment,Undergrad,21,Accepted,2019
+3245,Fudan,Asia,China,Therapeutics,Undergrad,16,Accepted,2019
+3257,Fudan-TSI,Asia,China,Foundational Advance,Undergrad,11,Accepted,2019
+2994,Gaston_Day_School,North America,United States,Environment,Undergrad,9,Accepted,2019
+2947,GDSYZX,Asia,China,High School,High_school,31,Accepted,2019
+3254,GENAS_China,Asia,China,High School,High_school,21,Accepted,2019
+3042,Georgia_State,North America,United States,Environment,Undergrad,20,Accepted,2019
+3222,GIFU_TOKAI,Asia,Japan,Foundational Advance,Undergrad,26,Accepted,2019
+3027,GO_Paris-Saclay,Europe,France,Foundational Advance,Overgrad,21,Accepted,2019
+3089,Greatbay_SCIE,Asia,China,High School,High_school,20,Accepted,2019
+3264,GreatBay_SZ,Asia,China,High School,High_school,23,Accepted,2019
+3128,Grenoble-Alpes,Europe,France,Diagnostics,Undergrad,19,Accepted,2019
+3171,Groningen,Europe,Netherlands,New Application,Overgrad,15,Accepted,2019
+3189,Guelph,North America,Canada,Diagnostics,Undergrad,32,Accepted,2019
+3050,Gunma,Asia,Japan,Foundational Advance,Undergrad,9,Accepted,2019
+2948,GZHS-United,Asia,China,High School,High_school,21,Accepted,2019
+2970,Hamburg,Europe,Germany,Foundational Advance,Overgrad,22,Accepted,2019
+3313,Hangzhou_WestLake,Asia,China,High School,High_school,12,Accepted,2019
+3281,Harvard,North America,United States,New Application,Undergrad,5,Accepted,2019
+3126,HBUT-China,Asia,China,Environment,Undergrad,18,Accepted,2019
+2982,HK_GTC,Asia,Hong Kong,High School,High_school,14,Accepted,2019
+3087,HK_SKHLPSS,Asia,Hong Kong,High School,High_school,24,Accepted,2019
+3219,HK_SSC,Asia,Hong Kong,High School,High_school,17,Accepted,2019
+3071,Hong_Kong-CUHK,Asia,Hong Kong,Food & Nutrition,Undergrad,17,Accepted,2019
+3063,Hong_Kong_HKU,Asia,Hong Kong,Therapeutics,Undergrad,22,Accepted,2019
+3017,Hong_Kong_HKUST,Asia,Hong Kong,Foundational Advance,Undergrad,24,Accepted,2019
+3076,Hong_Kong_JSS,Asia,Hong Kong,High School,High_school,57,Accepted,2019
+3058,Hong_Kong_LFC_PC,Asia,Hong Kong,High School,High_school,36,Accepted,2019
+3077,Hong_Kong_UCCKE,Asia,Hong Kong,High School,High_school,13,Accepted,2019
+2977,HQU-China,Asia,China,,Unspecified,1,Withdrawn,2019
+3241,HUBU-WUHAN,Asia,China,Energy,Undergrad,24,Accepted,2019
+2984,Humboldt_Berlin,Europe,Germany,Environment,Overgrad,17,Accepted,2019
+3196,HUST-China,Asia,China,Manufacturing,Undergrad,33,Accepted,2019
+3205,HZAU-China,Asia,China,New Application,Undergrad,33,Accepted,2019
+3293,HZNFHS_Hangzhou,Asia,China,High School,High_school,11,Withdrawn,2019
+3225,iBowu-China,Asia,China,High School,High_school,18,Accepted,2019
+3305,ICT-Mumbai,Asia,India,,Undergrad,6,Withdrawn,2019
+3165,IISc-Bangalore,Asia,India,New Application,Undergrad,30,Accepted,2019
+3285,IISER-Pune-India,Asia,India,Foundational Advance,Undergrad,19,Accepted,2019
+3121,IISER_Bhopal,Asia,India,New Application,Undergrad,26,Accepted,2019
+3011,IISER_Kolkata,Asia,India,Therapeutics,Undergrad,20,Accepted,2019
+3110,IISER_Tirupati,Asia,India,Therapeutics,Undergrad,17,Accepted,2019
+3163,IIT-Madras,Asia,India,Manufacturing,Undergrad,30,Accepted,2019
+3103,IIT_Chicago,North America,United States,Environment,Overgrad,22,Accepted,2019
+3102,Ionis_Paris,Europe,France,Environment,Undergrad,22,Accepted,2019
+3252,ITB_Indonesia,Asia,Indonesia,Environment,Undergrad,22,Accepted,2019
+3106,ITESO_Guadalajara,Latin America,Mexico,Environment,Undergrad,37,Accepted,2019
+2985,Jiangnan-China,Asia,China,Manufacturing,Undergrad,24,Accepted,2019
+3137,JiangnanU_China,Asia,China,New Application,Undergrad,21,Accepted,2019
+3133,Jiangsu_High_School,Asia,China,High School,High_school,18,Accepted,2019
+3078,Jilin_China,Asia,China,Therapeutics,Undergrad,20,Accepted,2019
+3209,JNFLS,Asia,China,High School,High_school,19,Accepted,2019
+2963,JNU-China,Asia,China,Manufacturing,Undergrad,27,Accepted,2019
+2925,Johns_Hopkins,North America,United States,Food & Nutrition,Overgrad,10,Withdrawn,2019
+3235,JSSC_New_Generation,Asia,Unspecified,High School,High_school,1,Withdrawn,2019
+3303,KAIT_JAPAN,Asia,Japan,Environment,Undergrad,12,Accepted,2019
+2968,KCL_UK,Europe,United Kingdom,Foundational Advance,Undergrad,11,Accepted,2019
+3200,KOREA,Asia,"Korea, Republic Of",High School,High_school,15,Accepted,2019
+3090,Korea_HS,Asia,"Korea, Republic Of",High School,High_school,20,Accepted,2019
+3107,KUAS_Korea,Asia,"Korea, Republic Of",Diagnostics,Overgrad,15,Accepted,2019
+3084,KU_LEUVEN,Europe,Belgium,Manufacturing,Undergrad,17,Accepted,2019
+3185,Kyoto,Asia,Japan,Environment,Undergrad,18,Accepted,2019
+3080,LACAS_BioBots,Asia,Pakistan,High School,High_school,19,Withdrawn,2019
+2974,Lambert_GA,North America,United States,High School,High_school,29,Accepted,2019
+3041,Leiden,Europe,Netherlands,Manufacturing,Overgrad,20,Accepted,2019
+3237,Lethbridge,North America,Canada,Manufacturing,Undergrad,16,Accepted,2019
+3001,Lethbridge_HS,North America,Canada,High School,High_school,24,Accepted,2019
+3182,Linkoping_Sweden,Europe,Sweden,Therapeutics,Overgrad,12,Accepted,2019
+3246,Lubbock_TTU,North America,United States,Manufacturing,Overgrad,9,Accepted,2019
+3282,Lund,Europe,Sweden,Food & Nutrition,Overgrad,13,Accepted,2019
+3170,LZU-CHINA,Asia,China,Therapeutics,Undergrad,23,Accepted,2019
+3151,Macquarie_Australia,Asia,Australia,Energy,Overgrad,22,Accepted,2019
+3122,MADRID_UCM,Europe,Spain,Diagnostics,Undergrad,16,Accepted,2019
+3255,MADRID_UCM_HS,Europe,Spain,High School,High_school,14,Accepted,2019
+2906,Manchester,Europe,United Kingdom,New Application,Undergrad,12,Accepted,2019
+3228,Marburg,Europe,Germany,Foundational Advance,Overgrad,23,Accepted,2019
+3251,Michigan,North America,United States,Food & Nutrition,Undergrad,17,Accepted,2019
+2919,MichiganState,North America,United States,Environment,Undergrad,11,Accepted,2019
+3297,Mines,North America,United States,Environment,Undergrad,10,Accepted,2019
+2932,Mingdao,Asia,Taiwan,High School,High_school,26,Accepted,2019
+3043,Missouri_Miners,North America,United States,Open,Undergrad,17,Accepted,2019
+2957,MIT,North America,United States,Foundational Advance,Undergrad,16,Accepted,2019
+3306,MITADTBIO_Pune,Asia,India,Environment,Undergrad,11,Accepted,2019
+3147,Montpellier,Europe,France,Foundational Advance,Overgrad,20,Accepted,2019
+3028,Moscow,Europe,Russian Federation,Diagnostics,Overgrad,28,Accepted,2019
+3218,MSP-Maastricht,Europe,Netherlands,New Application,Undergrad,14,Accepted,2019
+3113,Munich,Europe,Germany,Diagnostics,Overgrad,19,Accepted,2019
+3253,Nanjing,Asia,China,High School,High_school,8,Accepted,2019
+3022,Nanjing-China,Asia,China,Environment,Undergrad,27,Accepted,2019
+3134,Nanjing_High_School,Asia,China,High School,High_school,18,Accepted,2019
+2989,Nanjing_NFLS,Asia,China,High School,High_school,21,Accepted,2019
+2991,Nantes,Europe,France,New Application,Undergrad,20,Accepted,2019
+3139,NAU-CHINA,Asia,China,New Application,Undergrad,27,Accepted,2019
+3045,Navarra_BG,Europe,Spain,High School,High_school,14,Accepted,2019
+3204,NAWI_Graz,Europe,Austria,Diagnostics,Overgrad,18,Accepted,2019
+3029,NCHU_Taichung,Asia,Taiwan,Environment,Undergrad,14,Accepted,2019
+2997,NCKU_Tainan,Asia,Taiwan,Therapeutics,Undergrad,24,Accepted,2019
+3256,NCTU_Formosa,Asia,Taiwan,Environment,Undergrad,20,Accepted,2019
+2913,NEFU_China,Asia,China,Therapeutics,Undergrad,38,Accepted,2019
+2967,NEU_CHINA,Asia,China,Therapeutics,Undergrad,29,Accepted,2019
+3206,Newcastle,Europe,United Kingdom,Diagnostics,Undergrad,15,Accepted,2019
+3234,NJTech_China,Asia,China,Therapeutics,Undergrad,20,Accepted,2019
+3048,Northern_BC,North America,Canada,Diagnostics,Undergrad,16,Accepted,2019
+3269,Northwestern,North America,United States,Diagnostics,Undergrad,8,Accepted,2019
+2992,Nottingham,Europe,United Kingdom,Food & Nutrition,Undergrad,22,Accepted,2019
+3040,NTHU_Taiwan,Asia,Taiwan,New Application,Undergrad,12,Accepted,2019
+3250,NTU-Singapore,Asia,Singapore,Foundational Advance,Overgrad,10,Accepted,2019
+3064,NUDT_CHINA,Asia,China,Foundational Advance,Undergrad,30,Accepted,2019
+3198,NUS_Singapore,Asia,Singapore,Foundational Advance,Undergrad,22,Accepted,2019
+3299,NU_Kazakhstan,Asia,Kazakhstan,Energy,Undergrad,17,Accepted,2019
+2981,NWU-China,Asia,China,Diagnostics,Undergrad,24,Accepted,2019
+3268,NYMU-Taipei,Asia,Taiwan,New Application,Undergrad,10,Accepted,2019
+3289,NYU_Abu_Dhabi,Asia,United Arab Emirates,Diagnostics,Undergrad,25,Accepted,2019
+2956,NYU_New_York,North America,United States,Manufacturing,Undergrad,10,Accepted,2019
+3267,NYU_Shanghai,Asia,China,New Application,Undergrad,16,Accepted,2019
+2939,OhioState,North America,United States,Environment,Undergrad,15,Accepted,2019
+3309,Orleans,Europe,France,Environment,Overgrad,19,Accepted,2019
+2904,OUC-China,Asia,China,Foundational Advance,Undergrad,16,Accepted,2019
+3183,Oxford,Europe,United Kingdom,Therapeutics,Undergrad,21,Accepted,2019
+3176,Pasteur_Paris,Europe,France,Diagnostics,Undergrad,14,Accepted,2019
+3081,Peking,Asia,China,Foundational Advance,Undergrad,17,Accepted,2019
+3213,Penn,North America,United States,Open,Undergrad,10,Accepted,2019
+3308,Pittsburgh,North America,United States,Foundational Advance,Overgrad,9,Accepted,2019
+3038,Poitiers,Europe,France,Manufacturing,Overgrad,8,Accepted,2019
+3023,Potsdam,Europe,Germany,Software,Overgrad,21,Accepted,2019
+3021,PuiChing_Macau,Asia,Macao,High School,High_school,27,Accepted,2019
+2966,Purdue,North America,United States,Food & Nutrition,Undergrad,8,Accepted,2019
+3243,QDHS_Shanghai,Asia,China,High School,High_school,13,Accepted,2019
+3007,QHFZ-China,Asia,China,High School,High_school,14,Accepted,2019
+3056,Queens_Canada,North America,Canada,Diagnostics,Undergrad,19,Accepted,2019
+2937,RDFZ-China,Asia,China,High School,High_school,25,Accepted,2019
+3224,REC-CHENNAI,Asia,India,Foundational Advance,Undergrad,24,Accepted,2019
+3275,RHIT,North America,United States,Environment,Undergrad,11,Accepted,2019
+3247,Rice,North America,United States,Environment,Undergrad,21,Accepted,2019
+3010,Richmond_UR,North America,United States,Environment,Undergrad,10,Accepted,2019
+3157,RIS_BKK,Asia,Thailand,High School,High_school,9,Accepted,2019
+2993,Rotterdam_HR,Europe,Netherlands,Diagnostics,Overgrad,12,Accepted,2019
+3173,Ruperto_Carola,Europe,Germany,Foundational Advance,Undergrad,12,Accepted,2019
+2962,Saint_Joseph,Europe,Turkey,High School,High_school,15,Accepted,2019
+3273,Sao_Carlos-Brazil,Latin America,Brazil,New Application,Undergrad,18,Accepted,2019
+3154,SASTRA_Thanjavur,Asia,India,Diagnostics,Undergrad,21,Accepted,2019
+3194,SBS_NY,Asia,China,High School,High_school,10,Accepted,2019
+3221,SCU-China,Asia,China,Manufacturing,Undergrad,23,Accepted,2019
+3100,SCUT_China,Asia,China,New Application,Undergrad,18,Accepted,2019
+3091,SDSZ_China,Asia,China,High School,High_school,10,Accepted,2019
+3044,SDU-Denmark,Europe,Denmark,Therapeutics,Overgrad,14,Accepted,2019
+3127,SDU_CHINA,Asia,China,Foundational Advance,Undergrad,18,Accepted,2019
+3166,SEFLS_Shanghai,Asia,China,High School,High_school,11,Accepted,2019
+3263,SEU,Asia,China,Open,Undergrad,10,Accepted,2019
+3195,SEU-Nanjing-China,Asia,China,Environment,Undergrad,15,Accepted,2019
+3159,Shanghai-United,Asia,China,High School,High_school,20,Accepted,2019
+3239,ShanghaiFLS_China,Asia,China,High School,High_school,16,Accepted,2019
+3278,ShanghaiTech_China,Asia,China,Therapeutics,Undergrad,23,Accepted,2019
+3298,Shanghai_City,Asia,China,High School,High_school,18,Accepted,2019
+3135,Shanghai_High_School,Asia,China,High School,High_school,21,Accepted,2019
+3296,Shanghai_HS,Asia,China,High School,High_school,19,Accepted,2019
+3136,Shanghai_HS_United,Asia,China,High School,High_school,19,Accepted,2019
+3074,Shanghai_YGQ,Asia,China,High School,High_school,19,Withdrawn,2019
+3181,Sheffield,Europe,United Kingdom,Open,Undergrad,11,Accepted,2019
+3148,Shenzhen_SFLS,Asia,China,High School,High_school,19,Accepted,2019
+3156,SHSBNU_China,Asia,China,High School,High_school,22,Accepted,2019
+3295,SHSC_High_School,Asia,Unspecified,High School,High_school,1,Withdrawn,2019
+3109,SHSSIP-CHINA,Asia,China,High School,High_school,16,Withdrawn,2019
+3288,SIS_Korea,Asia,"Korea, Republic Of",High School,High_school,15,Accepted,2019
+2996,SJTU-BioX-Shanghai,Asia,China,New Application,Undergrad,20,Accepted,2019
+3055,SJTU-software,Asia,China,Software,Undergrad,17,Accepted,2019
+3132,SMMU-China,Asia,China,Therapeutics,Undergrad,26,Accepted,2019
+3240,SMS_Shenzhen,Asia,China,High School,High_school,4,Withdrawn,2019
+3262,SNU_India,Asia,India,Environment,Undergrad,13,Accepted,2019
+2909,Sorbonne_U_Paris,Europe,France,Environment,Undergrad,19,Accepted,2019
+3012,SoundBio,North America,United States,High School,High_school,34,Accepted,2019
+3284,Sriwijaya,Asia,Indonesia,Diagnostics,Undergrad,26,Accepted,2019
+3258,Stanford,North America,United States,Foundational Advance,Undergrad,8,Accepted,2019
+3024,Stockholm,Europe,Sweden,Therapeutics,Overgrad,26,Accepted,2019
+2930,Stony_Brook,North America,United States,Environment,Undergrad,32,Accepted,2019
+2923,Strasbourg,Europe,France,Food & Nutrition,Overgrad,17,Accepted,2019
+3014,Stuttgart,Europe,Germany,Foundational Advance,Overgrad,25,Accepted,2019
+2929,St_Andrews,Europe,United Kingdom,Foundational Advance,Undergrad,22,Accepted,2019
+3031,SUIS_Shanghai,Asia,China,High School,High_school,10,Accepted,2019
+2986,SUSTech_Shenzhen,Asia,China,Foundational Advance,Undergrad,16,Accepted,2019
+3140,Sydney_Australia,Asia,Australia,Therapeutics,Overgrad,7,Accepted,2019
+3179,SYSU-CHINA,Asia,China,Therapeutics,Undergrad,16,Accepted,2019
+2942,SYSU-Medicine,Asia,China,Therapeutics,Undergrad,22,Accepted,2019
+3142,SZPT-CHINA,Asia,China,Food & Nutrition,Undergrad,18,Accepted,2019
+3229,SZTA_Szeged_HU,Europe,Hungary,High School,High_school,13,Accepted,2019
+2912,SZU-China,Asia,China,Manufacturing,Undergrad,20,Accepted,2019
+3125,Tacoma_RAINmakers,North America,United States,Food & Nutrition,Undergrad,23,Accepted,2019
+3019,Tartu_TUIT,Europe,Estonia,Foundational Advance,Overgrad,28,Accepted,2019
+2921,TAS_Taipei,Asia,Taiwan,High School,High_school,21,Accepted,2019
+2943,TAU_Israel,Asia,Israel,Therapeutics,Overgrad,17,Accepted,2019
+2959,Tec-Chihuahua,Latin America,Mexico,Environment,Undergrad,37,Accepted,2019
+3292,Tec-Monterrey,Latin America,Mexico,Foundational Advance,Undergrad,27,Accepted,2019
+2934,Technion-Israel,Asia,Israel,Food & Nutrition,Overgrad,16,Accepted,2019
+3149,TecMonterrey_GDL,Latin America,Mexico,Diagnostics,Overgrad,23,Accepted,2019
+3290,Tec_CCM,Latin America,Mexico,,Unspecified,1,Withdrawn,2019
+2946,TelHai-Migal_Israel,Asia,Israel,Therapeutics,Overgrad,16,Accepted,2019
+3304,Thessaloniki,Europe,Greece,Foundational Advance,Undergrad,14,Accepted,2019
+2973,Thessaly,Europe,Greece,Diagnostics,Undergrad,19,Accepted,2019
+3112,Tianjin,Asia,China,Foundational Advance,Undergrad,21,Accepted,2019
+2933,TJUSLS_China,Asia,China,Therapeutics,Undergrad,22,Accepted,2019
+3259,TokyoTech,Asia,Japan,New Application,Undergrad,33,Accepted,2019
+3018,Tongji_China,Asia,China,Manufacturing,Undergrad,18,Accepted,2019
+3094,Tongji_Software,Asia,China,Software,Undergrad,15,Accepted,2019
+2910,Toronto,North America,Canada,Manufacturing,Undergrad,27,Accepted,2019
+3318,TPHS_San_Diego,North America,United States,High School,High_school,21,Accepted,2019
+2980,Tsinghua,Asia,China,New Application,Undergrad,20,Accepted,2019
+2979,Tsinghua-A,Asia,China,Open,Undergrad,19,Accepted,2019
+2918,TUDelft,Europe,Netherlands,Foundational Advance,Overgrad,19,Accepted,2019
+3096,Tuebingen,Europe,Germany,Therapeutics,Overgrad,22,Accepted,2019
+3212,Tufts,North America,United States,Foundational Advance,Overgrad,5,Accepted,2019
+2920,Tunghai_TAPG,Asia,Taiwan,Environment,Undergrad,15,Accepted,2019
+3187,TU_Darmstadt,Europe,Germany,Foundational Advance,Overgrad,35,Accepted,2019
+3037,TU_Dresden,Europe,Germany,Diagnostics,Overgrad,13,Accepted,2019
+3168,TU_Eindhoven,Europe,Netherlands,Diagnostics,Overgrad,15,Accepted,2019
+3002,TU_Kaiserslautern,Europe,Germany,Environment,Undergrad,24,Accepted,2019
+2998,UAAAN,Latin America,Mexico,Energy,Undergrad,18,Accepted,2019
+3072,UAlberta,North America,Canada,Food & Nutrition,Undergrad,12,Accepted,2019
+3317,UANL,Latin America,Mexico,Manufacturing,Undergrad,22,Accepted,2019
+3097,UA_Huntsville,North America,United States,New Application,Undergrad,7,Accepted,2019
+2969,UCAS-China,Asia,China,Therapeutics,Undergrad,20,Accepted,2019
+2945,UChicago,North America,United States,Manufacturing,Undergrad,18,Accepted,2019
+3111,UCL,Europe,United Kingdom,Therapeutics,Undergrad,16,Accepted,2019
+2917,UConn,North America,United States,,Undergrad,4,Withdrawn,2019
+3190,UCopenhagen,Europe,Denmark,Diagnostics,Overgrad,25,Accepted,2019
+3008,UCSC,North America,United States,Manufacturing,Overgrad,19,Accepted,2019
+3249,UC_Davis,North America,United States,Foundational Advance,Undergrad,8,Accepted,2019
+3310,UC_San_Diego,North America,United States,Diagnostics,Undergrad,13,Accepted,2019
+3188,UEAB_Kenya,Africa,Kenya,,Overgrad,8,Withdrawn,2019
+3034,UESTC-China,Asia,China,Environment,Undergrad,25,Accepted,2019
+3035,UESTC-Software,Asia,China,Software,Undergrad,21,Accepted,2019
+3124,UFPR-Curitiba-Brazil,Latin America,Brazil,,Overgrad,21,Withdrawn,2019
+3215,UFRGS_Brazil,Latin America,Brazil,Environment,Undergrad,18,Accepted,2019
+3242,UGA,North America,United States,Food & Nutrition,Undergrad,9,Accepted,2019
+2971,UiOslo_Norway,Europe,Norway,Energy,Overgrad,14,Accepted,2019
+2955,UIUC_Illinois,North America,United States,Environment,Undergrad,8,Accepted,2019
+3088,UI_Indonesia,Asia,Indonesia,Diagnostics,Undergrad,21,Accepted,2019
+3026,ULaval,North America,Canada,New Application,Overgrad,19,Accepted,2019
+2958,ULaVerne_Collab,North America,United States,Therapeutics,Undergrad,12,Accepted,2019
+3302,UMaryland,North America,United States,,Undergrad,12,Withdrawn,2019
+3033,UM_Macau,Asia,Macao,Environment,Undergrad,19,Accepted,2019
+3191,UNebraska-Lincoln,North America,United States,Therapeutics,Undergrad,15,Accepted,2019
+3101,UniGE-Geneva,Europe,Switzerland,New Application,Overgrad,12,Accepted,2019
+3294,Unimelb,Asia,Australia,Foundational Advance,Overgrad,13,Withdrawn,2019
+3075,UNSW_Australia,Asia,Australia,Manufacturing,Undergrad,11,Accepted,2019
+3271,uOttawa,North America,Canada,Foundational Advance,Undergrad,15,Accepted,2019
+3287,UPNAvarra_Spain,Europe,Spain,Environment,Undergrad,25,Accepted,2019
+3105,Uppsala_Universitet,Europe,Sweden,Manufacturing,Overgrad,22,Accepted,2019
+3169,UPRM,Latin America,Puerto Rico,Open,Undergrad,27,Accepted,2019
+2911,USAFA,North America,United States,Environment,Undergrad,16,Accepted,2019
+3104,USF,North America,United States,Energy(P),Undergrad,9,Withdrawn,2019
+3095,USP-Brazil,Latin America,Brazil,Foundational Advance,Overgrad,20,Accepted,2019
+3280,USP_SaoCarlos-Brazil,Latin America,Brazil,Environment,Overgrad,21,Accepted,2019
+3099,USTC,Asia,China,Environment,Undergrad,30,Accepted,2019
+3073,USTC-Software,Asia,China,Software,Undergrad,23,Accepted,2019
+3145,US_AFRL_CarrollHS,North America,United States,High School,High_school,17,Accepted,2019
+3217,UTArlingtonTexasUSA,North America,United States,Environment,Overgrad,18,Accepted,2019
+3265,UZurich,Europe,Switzerland,New Application,Overgrad,7,Accepted,2019
+3155,Victoria_Wellington,Asia,New Zealand,Energy,Overgrad,15,Accepted,2019
+3032,Vilnius-Lithuania,Europe,Lithuania,Foundational Advance,Undergrad,17,Accepted,2019
+3192,Virginia,North America,United States,Environment,Undergrad,13,Accepted,2019
+3053,VIT_Vellore,Asia,India,Therapeutics,Undergrad,19,Accepted,2019
+3286,Wageningen_UR,Europe,Netherlands,Food & Nutrition,Overgrad,24,Accepted,2019
+3051,Warwick,Europe,United Kingdom,Environment,Undergrad,19,Accepted,2019
+3123,Washington,North America,United States,Foundational Advance,Undergrad,52,Accepted,2019
+2995,Waterloo,North America,Canada,Environment,Undergrad,38,Accepted,2019
+3316,Western_Canada,North America,Canada,Environment,Overgrad,19,Accepted,2019
+3146,Westminster_UK,Europe,United Kingdom,Energy,Overgrad,14,Withdrawn,2019
+3057,West_Point,North America,United States,,Undergrad,6,Withdrawn,2019
+3184,WFLA-SPHBS,Asia,China,High School,High_school,1,Withdrawn,2019
+3098,WHU-China,Asia,China,New Application,Undergrad,24,Accepted,2019
+3059,William_and_Mary,North America,United States,Foundational Advance,Undergrad,12,Accepted,2019
+3116,WLC-Milwaukee,North America,United States,Environment,Undergrad,11,Accepted,2019
+3311,Worldshaper-Shanghai,Asia,China,High School,High_school,21,Accepted,2019
+3153,Worldshaper-Wuhan,Asia,China,High School,High_school,18,Accepted,2019
+3150,Worldshaper-XSHS,Asia,China,High School,High_school,24,Accepted,2019
+3138,Wroclaw,Europe,Poland,Environment,Overgrad,12,Accepted,2019
+3160,XHD-WS-Wuhan-A,Asia,China,High School,High_school,26,Accepted,2019
+3161,XHD-WS-Wuhan-B,Asia,China,High School,High_school,27,Accepted,2019
+3158,Xiamen_City,Asia,China,High School,High_school,12,Accepted,2019
+3312,Xiaoqu_Huazelei,Asia,China,High School,High_school,1,Withdrawn,2019
+3030,XJTLU-CHINA,Asia,China,Therapeutics,Undergrad,22,Accepted,2019
+3052,XJTU-CHINA,Asia,China,New Application,Undergrad,27,Accepted,2019
+2922,XMU-China,Asia,China,Open,Undergrad,36,Accepted,2019
+2999,YAU-China,Asia,China,Therapeutics,Undergrad,23,Accepted,2019
+2965,ZJU-China,Asia,China,Diagnostics,Undergrad,15,Accepted,2019
+2936,ZJUT-China,Asia,China,Environment,Undergrad,30,Accepted,2019

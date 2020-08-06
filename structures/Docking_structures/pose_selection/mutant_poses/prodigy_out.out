@@ -1,0 +1,570 @@
+pose0A23.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose0A23.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER118
+
+[+] Parsed structure file pose0A23 (2 chains, 406 residues)
+[+] No. of intermolecular contacts: 42
+[+] No. of charged-charged contacts: 2
+[+] No. of charged-polar contacts: 2
+[+] No. of charged-apolar contacts: 8
+[+] No. of polar-polar contacts: 1
+[+] No. of apolar-polar contacts: 17
+[+] No. of apolar-apolar contacts: 12
+[+] Percentage of apolar NIS residues: 40.17
+[+] Percentage of charged NIS residues: 31.34
+[++] Predicted binding affinity (kcal.mol-1):     -8.8
+[++] Predicted dissociation constant (M) at 25.0˚C:  3.8e-07
+pose0A44.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose0A44.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER126
+
+[+] Parsed structure file pose0A44 (2 chains, 414 residues)
+[+] No. of intermolecular contacts: 63
+[+] No. of charged-charged contacts: 3
+[+] No. of charged-polar contacts: 5
+[+] No. of charged-apolar contacts: 16
+[+] No. of polar-polar contacts: 4
+[+] No. of apolar-polar contacts: 23
+[+] No. of apolar-apolar contacts: 12
+[+] Percentage of apolar NIS residues: 39.72
+[+] Percentage of charged NIS residues: 31.27
+[++] Predicted binding affinity (kcal.mol-1):    -10.5
+[++] Predicted dissociation constant (M) at 25.0˚C:  1.9e-08
+pose0A50.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose0A50.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER123
+
+[+] Parsed structure file pose0A50 (2 chains, 411 residues)
+[+] No. of intermolecular contacts: 45
+[+] No. of charged-charged contacts: 1
+[+] No. of charged-polar contacts: 4
+[+] No. of charged-apolar contacts: 8
+[+] No. of polar-polar contacts: 4
+[+] No. of apolar-polar contacts: 19
+[+] No. of apolar-apolar contacts: 9
+[+] Percentage of apolar NIS residues: 39.32
+[+] Percentage of charged NIS residues: 30.77
+[++] Predicted binding affinity (kcal.mol-1):     -8.8
+[++] Predicted dissociation constant (M) at 25.0˚C:  3.7e-07
+Pose1A23.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/Pose1A23.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER118
+
+[+] Parsed structure file Pose1A23 (2 chains, 406 residues)
+[+] No. of intermolecular contacts: 42
+[+] No. of charged-charged contacts: 2
+[+] No. of charged-polar contacts: 2
+[+] No. of charged-apolar contacts: 8
+[+] No. of polar-polar contacts: 1
+[+] No. of apolar-polar contacts: 17
+[+] No. of apolar-apolar contacts: 12
+[+] Percentage of apolar NIS residues: 40.17
+[+] Percentage of charged NIS residues: 31.34
+[++] Predicted binding affinity (kcal.mol-1):     -8.8
+[++] Predicted dissociation constant (M) at 25.0˚C:  3.8e-07
+Pose1A44.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/Pose1A44.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER126
+
+[+] Parsed structure file Pose1A44 (2 chains, 414 residues)
+[+] No. of intermolecular contacts: 62
+[+] No. of charged-charged contacts: 3
+[+] No. of charged-polar contacts: 4
+[+] No. of charged-apolar contacts: 16
+[+] No. of polar-polar contacts: 4
+[+] No. of apolar-polar contacts: 23
+[+] No. of apolar-apolar contacts: 12
+[+] Percentage of apolar NIS residues: 39.72
+[+] Percentage of charged NIS residues: 31.27
+[++] Predicted binding affinity (kcal.mol-1):    -10.5
+[++] Predicted dissociation constant (M) at 25.0˚C:  1.9e-08
+pose1A50.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose1A50.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER123
+
+[+] Parsed structure file pose1A50 (2 chains, 411 residues)
+[+] No. of intermolecular contacts: 46
+[+] No. of charged-charged contacts: 1
+[+] No. of charged-polar contacts: 4
+[+] No. of charged-apolar contacts: 8
+[+] No. of polar-polar contacts: 4
+[+] No. of apolar-polar contacts: 20
+[+] No. of apolar-apolar contacts: 9
+[+] Percentage of apolar NIS residues: 39.14
+[+] Percentage of charged NIS residues: 30.86
+[++] Predicted binding affinity (kcal.mol-1):     -9.0
+[++] Predicted dissociation constant (M) at 25.0˚C:  2.4e-07
+Pose2A23.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/Pose2A23.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER118
+
+[+] Parsed structure file Pose2A23 (2 chains, 406 residues)
+[+] No. of intermolecular contacts: 46
+[+] No. of charged-charged contacts: 4
+[+] No. of charged-polar contacts: 2
+[+] No. of charged-apolar contacts: 16
+[+] No. of polar-polar contacts: 2
+[+] No. of apolar-polar contacts: 11
+[+] No. of apolar-apolar contacts: 11
+[+] Percentage of apolar NIS residues: 40.11
+[+] Percentage of charged NIS residues: 31.23
+[++] Predicted binding affinity (kcal.mol-1):     -8.2
+[++] Predicted dissociation constant (M) at 25.0˚C:  9.4e-07
+Pose2A44.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/Pose2A44.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER126
+
+[+] Parsed structure file Pose2A44 (2 chains, 414 residues)
+[+] No. of intermolecular contacts: 78
+[+] No. of charged-charged contacts: 6
+[+] No. of charged-polar contacts: 4
+[+] No. of charged-apolar contacts: 19
+[+] No. of polar-polar contacts: 1
+[+] No. of apolar-polar contacts: 16
+[+] No. of apolar-apolar contacts: 32
+[+] Percentage of apolar NIS residues: 39.72
+[+] Percentage of charged NIS residues: 31.27
+[++] Predicted binding affinity (kcal.mol-1):    -10.1
+[++] Predicted dissociation constant (M) at 25.0˚C:  3.9e-08
+pose2A50.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose2A50.pdb
+[!] Structure contains gaps:
+	B GLN1 < Fragment 0 > B SER123
+	A MET1 < Fragment 1 > A ASN144
+	A MET145 < Fragment 2 > A ASN288
+
+[+] Parsed structure file pose2A50 (2 chains, 411 residues)
+[+] No. of intermolecular contacts: 51
+[+] No. of charged-charged contacts: 6
+[+] No. of charged-polar contacts: 3
+[+] No. of charged-apolar contacts: 13
+[+] No. of polar-polar contacts: 3
+[+] No. of apolar-polar contacts: 11
+[+] No. of apolar-apolar contacts: 15
+[+] Percentage of apolar NIS residues: 39.89
+[+] Percentage of charged NIS residues: 30.48
+[++] Predicted binding affinity (kcal.mol-1):     -8.1
+[++] Predicted dissociation constant (M) at 25.0˚C:  1.2e-06
+Pose3A23.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/Pose3A23.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER118
+
+[+] Parsed structure file Pose3A23 (2 chains, 406 residues)
+[+] No. of intermolecular contacts: 80
+[+] No. of charged-charged contacts: 3
+[+] No. of charged-polar contacts: 6
+[+] No. of charged-apolar contacts: 27
+[+] No. of polar-polar contacts: 3
+[+] No. of apolar-polar contacts: 22
+[+] No. of apolar-apolar contacts: 19
+[+] Percentage of apolar NIS residues: 40.46
+[+] Percentage of charged NIS residues: 31.05
+[++] Predicted binding affinity (kcal.mol-1):    -11.5
+[++] Predicted dissociation constant (M) at 25.0˚C:  3.8e-09
+Pose3A44.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/Pose3A44.pdb
+[!] Structure contains gaps:
+	B GLN1 < Fragment 0 > B SER126
+	A MET1 < Fragment 1 > A ASN144
+	A MET145 < Fragment 2 > A ASN288
+
+[+] Parsed structure file Pose3A44 (2 chains, 414 residues)
+[+] No. of intermolecular contacts: 53
+[+] No. of charged-charged contacts: 5
+[+] No. of charged-polar contacts: 8
+[+] No. of charged-apolar contacts: 24
+[+] No. of polar-polar contacts: 0
+[+] No. of apolar-polar contacts: 5
+[+] No. of apolar-apolar contacts: 11
+[+] Percentage of apolar NIS residues: 40.40
+[+] Percentage of charged NIS residues: 31.07
+[++] Predicted binding affinity (kcal.mol-1):     -8.1
+[++] Predicted dissociation constant (M) at 25.0˚C:  1.1e-06
+Pose3A50.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/Pose3A50.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER123
+
+[+] Parsed structure file Pose3A50 (2 chains, 411 residues)
+[+] No. of intermolecular contacts: 54
+[+] No. of charged-charged contacts: 1
+[+] No. of charged-polar contacts: 6
+[+] No. of charged-apolar contacts: 11
+[+] No. of polar-polar contacts: 3
+[+] No. of apolar-polar contacts: 16
+[+] No. of apolar-apolar contacts: 17
+[+] Percentage of apolar NIS residues: 39.60
+[+] Percentage of charged NIS residues: 30.48
+[++] Predicted binding affinity (kcal.mol-1):     -8.6
+[++] Predicted dissociation constant (M) at 25.0˚C:  5.2e-07
+Pose4A23.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/Pose4A23.pdb
+[!] Structure contains gaps:
+	B GLN1 < Fragment 0 > B SER118
+	A MET1 < Fragment 1 > A ASN144
+	A MET145 < Fragment 2 > A ASN288
+
+[+] Parsed structure file Pose4A23 (2 chains, 406 residues)
+[+] No. of intermolecular contacts: 36
+[+] No. of charged-charged contacts: 5
+[+] No. of charged-polar contacts: 8
+[+] No. of charged-apolar contacts: 10
+[+] No. of polar-polar contacts: 1
+[+] No. of apolar-polar contacts: 6
+[+] No. of apolar-apolar contacts: 6
+[+] Percentage of apolar NIS residues: 40.40
+[+] Percentage of charged NIS residues: 31.52
+[++] Predicted binding affinity (kcal.mol-1):     -6.7
+[++] Predicted dissociation constant (M) at 25.0˚C:  1.3e-05
+Pose4A44.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/Pose4A44.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER126
+
+[+] Parsed structure file Pose4A44 (2 chains, 414 residues)
+[+] No. of intermolecular contacts: 53
+[+] No. of charged-charged contacts: 4
+[+] No. of charged-polar contacts: 9
+[+] No. of charged-apolar contacts: 24
+[+] No. of polar-polar contacts: 0
+[+] No. of apolar-polar contacts: 6
+[+] No. of apolar-apolar contacts: 10
+[+] Percentage of apolar NIS residues: 40.40
+[+] Percentage of charged NIS residues: 31.07
+[++] Predicted binding affinity (kcal.mol-1):     -8.2
+[++] Predicted dissociation constant (M) at 25.0˚C:  8.9e-07
+Pose4A50.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/Pose4A50.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER123
+
+[+] Parsed structure file Pose4A50 (2 chains, 411 residues)
+[+] No. of intermolecular contacts: 46
+[+] No. of charged-charged contacts: 4
+[+] No. of charged-polar contacts: 9
+[+] No. of charged-apolar contacts: 13
+[+] No. of polar-polar contacts: 1
+[+] No. of apolar-polar contacts: 7
+[+] No. of apolar-apolar contacts: 12
+[+] Percentage of apolar NIS residues: 39.77
+[+] Percentage of charged NIS residues: 30.40
+[++] Predicted binding affinity (kcal.mol-1):     -7.4
+[++] Predicted dissociation constant (M) at 25.0˚C:  3.8e-06
+pose5A23.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose5A23.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER118
+
+[+] Parsed structure file pose5A23 (2 chains, 406 residues)
+[+] No. of intermolecular contacts: 39
+[+] No. of charged-charged contacts: 1
+[+] No. of charged-polar contacts: 4
+[+] No. of charged-apolar contacts: 11
+[+] No. of polar-polar contacts: 0
+[+] No. of apolar-polar contacts: 14
+[+] No. of apolar-apolar contacts: 9
+[+] Percentage of apolar NIS residues: 40.34
+[+] Percentage of charged NIS residues: 31.25
+[++] Predicted binding affinity (kcal.mol-1):     -8.5
+[++] Predicted dissociation constant (M) at 25.0˚C:  6.2e-07
+pose5A44.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose5A44.pdb
+[!] Structure contains gaps:
+	B GLN1 < Fragment 0 > B SER126
+	A MET1 < Fragment 1 > A ASN144
+	A MET145 < Fragment 2 > A ASN288
+
+[+] Parsed structure file pose5A44 (2 chains, 414 residues)
+[+] No. of intermolecular contacts: 47
+[+] No. of charged-charged contacts: 1
+[+] No. of charged-polar contacts: 1
+[+] No. of charged-apolar contacts: 4
+[+] No. of polar-polar contacts: 1
+[+] No. of apolar-polar contacts: 10
+[+] No. of apolar-apolar contacts: 30
+[+] Percentage of apolar NIS residues: 39.83
+[+] Percentage of charged NIS residues: 31.36
+[++] Predicted binding affinity (kcal.mol-1):     -6.7
+[++] Predicted dissociation constant (M) at 25.0˚C:  1.1e-05
+pose5A50.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose5A50.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER123
+
+[+] Parsed structure file pose5A50 (2 chains, 411 residues)
+[+] No. of intermolecular contacts: 38
+[+] No. of charged-charged contacts: 0
+[+] No. of charged-polar contacts: 0
+[+] No. of charged-apolar contacts: 9
+[+] No. of polar-polar contacts: 1
+[+] No. of apolar-polar contacts: 9
+[+] No. of apolar-apolar contacts: 19
+[+] Percentage of apolar NIS residues: 39.66
+[+] Percentage of charged NIS residues: 30.59
+[++] Predicted binding affinity (kcal.mol-1):     -7.1
+[++] Predicted dissociation constant (M) at 25.0˚C:  6.7e-06
+pose6A23.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose6A23.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER118
+
+[+] Parsed structure file pose6A23 (2 chains, 406 residues)
+[+] No. of intermolecular contacts: 30
+[+] No. of charged-charged contacts: 0
+[+] No. of charged-polar contacts: 1
+[+] No. of charged-apolar contacts: 5
+[+] No. of polar-polar contacts: 0
+[+] No. of apolar-polar contacts: 15
+[+] No. of apolar-apolar contacts: 9
+[+] Percentage of apolar NIS residues: 40.34
+[+] Percentage of charged NIS residues: 31.25
+[++] Predicted binding affinity (kcal.mol-1):     -8.0
+[++] Predicted dissociation constant (M) at 25.0˚C:  1.4e-06
+pose6A44.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose6A44.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER126
+
+[+] Parsed structure file pose6A44 (2 chains, 414 residues)
+[+] No. of intermolecular contacts: 54
+[+] No. of charged-charged contacts: 4
+[+] No. of charged-polar contacts: 4
+[+] No. of charged-apolar contacts: 10
+[+] No. of polar-polar contacts: 3
+[+] No. of apolar-polar contacts: 18
+[+] No. of apolar-apolar contacts: 15
+[+] Percentage of apolar NIS residues: 39.66
+[+] Percentage of charged NIS residues: 31.44
+[++] Predicted binding affinity (kcal.mol-1):     -9.1
+[++] Predicted dissociation constant (M) at 25.0˚C:  2.2e-07
+pose6A50.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose6A50.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER123
+
+[+] Parsed structure file pose6A50 (2 chains, 411 residues)
+[+] No. of intermolecular contacts: 40
+[+] No. of charged-charged contacts: 0
+[+] No. of charged-polar contacts: 2
+[+] No. of charged-apolar contacts: 9
+[+] No. of polar-polar contacts: 1
+[+] No. of apolar-polar contacts: 10
+[+] No. of apolar-apolar contacts: 18
+[+] Percentage of apolar NIS residues: 39.66
+[+] Percentage of charged NIS residues: 30.59
+[++] Predicted binding affinity (kcal.mol-1):     -7.3
+[++] Predicted dissociation constant (M) at 25.0˚C:  4.6e-06
+pose7A23.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose7A23.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER118
+
+[+] Parsed structure file pose7A23 (2 chains, 406 residues)
+[+] No. of intermolecular contacts: 35
+[+] No. of charged-charged contacts: 4
+[+] No. of charged-polar contacts: 2
+[+] No. of charged-apolar contacts: 15
+[+] No. of polar-polar contacts: 2
+[+] No. of apolar-polar contacts: 6
+[+] No. of apolar-apolar contacts: 6
+[+] Percentage of apolar NIS residues: 40.29
+[+] Percentage of charged NIS residues: 31.14
+[++] Predicted binding affinity (kcal.mol-1):     -7.0
+[++] Predicted dissociation constant (M) at 25.0˚C:  7.8e-06
+pose7A44.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose7A44.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER126
+
+[+] Parsed structure file pose7A44 (2 chains, 414 residues)
+[+] No. of intermolecular contacts: 77
+[+] No. of charged-charged contacts: 6
+[+] No. of charged-polar contacts: 4
+[+] No. of charged-apolar contacts: 22
+[+] No. of polar-polar contacts: 2
+[+] No. of apolar-polar contacts: 14
+[+] No. of apolar-apolar contacts: 29
+[+] Percentage of apolar NIS residues: 40.51
+[+] Percentage of charged NIS residues: 30.59
+[++] Predicted binding affinity (kcal.mol-1):     -9.7
+[++] Predicted dissociation constant (M) at 25.0˚C:  7.6e-08
+pose7A50.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose7A50.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER123
+
+[+] Parsed structure file pose7A50 (2 chains, 411 residues)
+[+] No. of intermolecular contacts: 50
+[+] No. of charged-charged contacts: 4
+[+] No. of charged-polar contacts: 1
+[+] No. of charged-apolar contacts: 18
+[+] No. of polar-polar contacts: 2
+[+] No. of apolar-polar contacts: 7
+[+] No. of apolar-apolar contacts: 18
+[+] Percentage of apolar NIS residues: 39.89
+[+] Percentage of charged NIS residues: 30.20
+[++] Predicted binding affinity (kcal.mol-1):     -7.7
+[++] Predicted dissociation constant (M) at 25.0˚C:  2.3e-06
+pose8A23.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose8A23.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER118
+
+[+] Parsed structure file pose8A23 (2 chains, 406 residues)
+[+] No. of intermolecular contacts: 11
+[+] No. of charged-charged contacts: 0
+[+] No. of charged-polar contacts: 1
+[+] No. of charged-apolar contacts: 2
+[+] No. of polar-polar contacts: 0
+[+] No. of apolar-polar contacts: 4
+[+] No. of apolar-apolar contacts: 4
+[+] Percentage of apolar NIS residues: 40.34
+[+] Percentage of charged NIS residues: 31.25
+[++] Predicted binding affinity (kcal.mol-1):     -5.2
+[++] Predicted dissociation constant (M) at 25.0˚C:  1.5e-04
+pose8A44.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose8A44.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER126
+
+[+] Parsed structure file pose8A44 (2 chains, 414 residues)
+[+] No. of intermolecular contacts: 44
+[+] No. of charged-charged contacts: 1
+[+] No. of charged-polar contacts: 3
+[+] No. of charged-apolar contacts: 14
+[+] No. of polar-polar contacts: 1
+[+] No. of apolar-polar contacts: 13
+[+] No. of apolar-apolar contacts: 12
+[+] Percentage of apolar NIS residues: 40.11
+[+] Percentage of charged NIS residues: 31.20
+[++] Predicted binding affinity (kcal.mol-1):     -8.4
+[++] Predicted dissociation constant (M) at 25.0˚C:  7.0e-07
+pose8A50.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose8A50.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER123
+
+[+] Parsed structure file pose8A50 (2 chains, 411 residues)
+[+] No. of intermolecular contacts: 42
+[+] No. of charged-charged contacts: 1
+[+] No. of charged-polar contacts: 3
+[+] No. of charged-apolar contacts: 5
+[+] No. of polar-polar contacts: 2
+[+] No. of apolar-polar contacts: 16
+[+] No. of apolar-apolar contacts: 15
+[+] Percentage of apolar NIS residues: 39.49
+[+] Percentage of charged NIS residues: 30.68
+[++] Predicted binding affinity (kcal.mol-1):     -8.2
+[++] Predicted dissociation constant (M) at 25.0˚C:  1.0e-06
+pose9A23.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose9A23.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER118
+
+[+] Parsed structure file pose9A23 (2 chains, 406 residues)
+[+] No. of intermolecular contacts: 25
+[+] No. of charged-charged contacts: 1
+[+] No. of charged-polar contacts: 2
+[+] No. of charged-apolar contacts: 4
+[+] No. of polar-polar contacts: 0
+[+] No. of apolar-polar contacts: 7
+[+] No. of apolar-apolar contacts: 11
+[+] Percentage of apolar NIS residues: 40.34
+[+] Percentage of charged NIS residues: 31.25
+[++] Predicted binding affinity (kcal.mol-1):     -6.2
+[++] Predicted dissociation constant (M) at 25.0˚C:  3.0e-05
+pose9A44.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose9A44.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER126
+
+[+] Parsed structure file pose9A44 (2 chains, 414 residues)
+[+] No. of intermolecular contacts: 63
+[+] No. of charged-charged contacts: 4
+[+] No. of charged-polar contacts: 4
+[+] No. of charged-apolar contacts: 13
+[+] No. of polar-polar contacts: 2
+[+] No. of apolar-polar contacts: 18
+[+] No. of apolar-apolar contacts: 22
+[+] Percentage of apolar NIS residues: 39.77
+[+] Percentage of charged NIS residues: 31.25
+[++] Predicted binding affinity (kcal.mol-1):     -9.6
+[++] Predicted dissociation constant (M) at 25.0˚C:  9.6e-08
+pose9A50.pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/mutant_poses/pose9A50.pdb
+[!] Structure contains gaps:
+	A MET1 < Fragment 0 > A ASN144
+	A MET145 < Fragment 1 > A ASN288
+	B GLN1 < Fragment 2 > B SER123
+
+[+] Parsed structure file pose9A50 (2 chains, 411 residues)
+[+] No. of intermolecular contacts: 47
+[+] No. of charged-charged contacts: 0
+[+] No. of charged-polar contacts: 4
+[+] No. of charged-apolar contacts: 5
+[+] No. of polar-polar contacts: 3
+[+] No. of apolar-polar contacts: 12
+[+] No. of apolar-apolar contacts: 23
+[+] Percentage of apolar NIS residues: 39.66
+[+] Percentage of charged NIS residues: 30.59
+[++] Predicted binding affinity (kcal.mol-1):     -6.9
+[++] Predicted dissociation constant (M) at 25.0˚C:  8.1e-06

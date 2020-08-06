@@ -1,0 +1,40 @@
+BF10(0).pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/rosie_docking/BF10(0).pdb
+[++] Predicted binding affinity (kcal.mol-1):     -8.4
+[++] Predicted dissociation constant (M) at 25.0˚C:  6.9e-07
+BF10(1).pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/rosie_docking/BF10(1).pdb
+[++] Predicted binding affinity (kcal.mol-1):     -8.7
+[++] Predicted dissociation constant (M) at 25.0˚C:  4.4e-07
+BF10(2).pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/rosie_docking/BF10(2).pdb
+[++] Predicted binding affinity (kcal.mol-1):     -8.0
+[++] Predicted dissociation constant (M) at 25.0˚C:  1.3e-06
+BF10(3).pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/rosie_docking/BF10(3).pdb
+[++] Predicted binding affinity (kcal.mol-1):     -8.4
+[++] Predicted dissociation constant (M) at 25.0˚C:  7.3e-07
+BF10(4).pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/rosie_docking/BF10(4).pdb
+[++] Predicted binding affinity (kcal.mol-1):     -7.3
+[++] Predicted dissociation constant (M) at 25.0˚C:  4.5e-06
+BF10(5).pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/rosie_docking/BF10(5).pdb
+[++] Predicted binding affinity (kcal.mol-1):     -7.5
+[++] Predicted dissociation constant (M) at 25.0˚C:  2.9e-06
+BF10(6).pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/rosie_docking/BF10(6).pdb
+[++] Predicted binding affinity (kcal.mol-1):     -6.5
+[++] Predicted dissociation constant (M) at 25.0˚C:  1.6e-05
+BF10(7).pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/rosie_docking/BF10(7).pdb
+[++] Predicted binding affinity (kcal.mol-1):     -6.8
+[++] Predicted dissociation constant (M) at 25.0˚C:  9.6e-06
+BF10(8).pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/rosie_docking/BF10(8).pdb
+[++] Predicted binding affinity (kcal.mol-1):     -6.8
+[++] Predicted dissociation constant (M) at 25.0˚C:  9.9e-06
+BF10(9).pdb
+[+] Reading structure file: /home/user/Documents/iGem2020Uppsala/structures/Docking_structures/pose_selection/rosie_docking/BF10(9).pdb
+[++] Predicted binding affinity (kcal.mol-1):     -6.5
+[++] Predicted dissociation constant (M) at 25.0˚C:  1.7e-05

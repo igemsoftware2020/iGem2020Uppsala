@@ -1,0 +1,14 @@
+>VHHtemplate consensus
+qvqlqesgg-glvqpggslrlscaas giilrfts----- mawyrqapgkerelvar itssggt-------- nyadsvk-grftisrdnakktvylqmnslkpedtavyyc nt-------------------------qdl wgqgtqvtvss
+
+>VHH A23
+qvqlqesgg-glvqpggslrlscaas glifrfsa----- mswyrqgpgkerelvag itsnggtt------- nyadfak-grftisrdnakntdylqmnslkpedtavyyc haglrmd--------------------qsrd wgqgtqvtvss
+
+>VHH BF10
+qvqlqesgg-glvqpggslrlscaas gftfsryt----- mswyrqapgkerelvaa itksgtai------- nyadsvk-grftisrdnakntlylqmnslkpedtavyyc arggftiapl-----------------qdsy wgqgtqvtvss
+
+>VHH_A50
+qvqlqdsgg-glvqaggslrtsctas grsfsnha----- mgwfrqapgkergfvaa vgwiagnt-------- yyadsvk-grftisrdnakntlslqmnnlkpedtavyyc aarnalrpvsnnlsd------------yty wgqgtqvtvss
+
+>VHH A44
+qvqlqdsgg-glvqaggslrlscavs glsfrsyg----- mgwfrqapgkerefvar iswiggft------- hytdsvk-grftisrdnakntlylqmnslkpedtavyyc aapgapysdrgrnase-----------ydy wgqgtqvtvss

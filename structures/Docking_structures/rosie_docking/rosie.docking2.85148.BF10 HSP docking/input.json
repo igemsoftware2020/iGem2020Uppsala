@@ -1,0 +1,5 @@
+{
+  "app": "docking2", 
+  "docking_partners": "A_B", 
+  "protocol": "local_docking"
+}

@@ -17,20 +17,22 @@ from collections import defaultdict
 # this script also assumes that file is in the current working directory
 file = '2019__team_list__2020-08-04.csv'
 
-#data import
-team_data = pd.read_csv(file, sep = ",", header=0)
+# data import
+team_data = pd.read_csv(file, sep=",", header=0)
 year = str(team_data.iloc[1][8])
-title = ("iGem "+ str(team_data.iloc[1][8])+" Distribution of Projects by Track")
+title = ("iGem " + str(team_data.iloc[1][8]) +
+         " Distribution of Projects by Track")
 
-#data cleaning, removing spaces and removing high school and non-accepted projects
+# data cleaning, removing spaces and removing high school and non-accepted projects
 team_data.columns = team_data.columns.str.replace(' ', '')
-team_data = team_data.drop(team_data[(team_data['Track'] == "High School") | (team_data['Status'] != "Accepted")].index)
+team_data = team_data.drop(team_data[(team_data['Track'] == "High School") | (
+    team_data['Status'] != "Accepted")].index)
 
 # Establishing how to divide the data, in this case by region and country
 # and then by Track, here called category
 regions = team_data['Region'].unique()
 countries = team_data['Country'].unique()
-#categories = ["Environment", "Manufacturing" ,"Diagnostics" ,'Therapeutics',
+# categories = ["Environment", "Manufacturing" ,"Diagnostics" ,'Therapeutics',
 # "New Application", "Foundational Advance", "Energy" ,"Food & Nutrition",
 # "Open" ,"Software"]
 categories = team_data['Track'].unique()
@@ -43,10 +45,10 @@ results = defaultdict(list)
 # Loop to go through the categories and create the graph
 for i in regions:
     for q in categories:
-        seriesObj = team_data.apply(lambda x: True if x['Region'] == i and x['Track'] == q else False , axis=1)
+        seriesObj = team_data.apply(
+            lambda x: True if x['Region'] == i and x['Track'] == q else False, axis=1)
         numOfRows = len(seriesObj[seriesObj == True].index)
         results[i].append(numOfRows)
-
 
     for i in results:
         total = sum(results[i])
@@ -56,6 +58,7 @@ for i in regions:
         for q in results[i]:
             percents.append(q/total)
         results[i] = percents
+
 
 def survey(results, category_names):
     """
@@ -94,7 +97,7 @@ def survey(results, category_names):
                     color=text_color, fontsize=30)
     ax.legend(ncol=len(category_names), bbox_to_anchor=(-0.1, 0),
               loc='upper left', fontsize='x-large')
-    plt.title(title, loc = 'center', fontsize=50)
+    plt.title(title, loc='center', fontsize=50)
     return fig, ax
 
 

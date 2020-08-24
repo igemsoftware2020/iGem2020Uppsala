@@ -1,1 +1,83 @@
+#install.packages("tseries")
+library("tseries")
+#install.packages("stats")
+library("stats")
+#install.packages("forecast")
+library("forecast")
+#plot orignal data
+t<-seq(0.01,10,1)
+vhh_DBD<-c(4587.6,4935.8,5373.4,6020.9,7278.,9098.9,10376.2,12174.6,
+     15180.4,17179.7,18872.9,22005.6,27194.5,35673.2,48637.5,
+     61339.9,71813.6,79715,85195.5,90564.4,100280.1,110863.1,
+     121717.4,137422,161840.2,187318.9,219438.5,270092.3,
+     319244.6,348517.7,412119.3,487940.2,538580,592963.2,
+     643563.1,688858.2,746395.1,832035.9,919281.1,990865)
+kd<-0.5
+k2<-0.5
+k3<-0.5
+k4<-0.5
+k5<-0.0136
+final_concentration<-0.5*kd*k2*k3*k4*k5*vhh_DBD
+#取消科学计数法?（数据太大了）
 
+#log:R里面log默认取log e
+lncon<-log(final_concentration)
+plot(t,lncon,type='l',xlab='time',ylab='LNConcentration',xaxt = "n")
+axis(1,seq(0.01, 10, 1),seq(0.01, 10, 1))
+#difference#make data more stable
+diff.lncon<-diff(lncon)
+plot(seq(0.02,9,1),diff.lncon,xlab='time',ylab='Diff.Lncon',type='l')
+library(tseries)
+adf.test(diff.lncon)#root测试，根的测试，解的测试，看看有没有单位根（不重要）
+diff.lncon2<-diff(diff.lncon)
+plot(seq(0.03,9,1),diff.lncon2,type='l',xlab='time',ylab='2Diff.Lncon')
+library(tseries)
+adf.test(diff.lncon2)#root测试，根的测试，解的测试，看看有没有单位根（不重要）
+#difference=2 acf pacf
+#par(mfrow = c(1,2))#拼图
+#acf(diff.lncon2, main='')#autocorrelation function看图判断model的MA和AR
+#pacf(diff.lncon2, main='')#particial autocorrelation function看图判断model的MA和AR
+#From ACF PACF picture:MA=2,AR=2 Try ARIMA model, Find the smallest AIC model
+#这部分我偷懒调用了package但事实证明package真香
+require(forecast)
+ARIMAfit = auto.arima(diff.lngdp2, approximation=FALSE,trace=FALSE)
+summary(ARIMAfit)
+#正经测试：用arima看哪个MA和AR适用于这个模型
+m1=arima(lngdp, order=c(2,2,1));m1
+m2=arima(lngdp, order=c(2,2,2));m2
+m3=Arima(lngdp, order=c(2,2,3));m3
+#n1=arima(lngdp, order=c(1,2,1));n1
+#n2=arima(lngdp, order=c(1,2,2));n2
+#n3=arima(lngdp, order=c(1,2,3));n3
+#s1=arima(lngdp, order=c(3,2,1));s1
+#s2=arima(lngdp, order=c(3,2,2));s2
+#s3=arima(lngdp, order=c(3,2,3));s3
+#Fit ARIMA model(1,2,1)(2,2,3)
+
+hist(n1$residuals)
+qqnorm(n1$residuals)
+tsdiag(n1)
+acf(n1$residuals)
+pacf(n1$residuals)
+par(mfrow=c(2,1))
+hist(m3$residuals)
+qqnorm(m3$residuals)
+tsdiag(m3)
+acf(m3$residuals)
+pacf(m3$residuals)
+#choose ARIMA model (2,2,3) to forecast
+#par(mfrow=c(1,1))#还原拼图
+library(stats)
+library(forecast)#预测
+pred = predict(m3, n.ahead = 10)
+pred
+options(scipen=200)#科学计数法
+plot(t,y,xlab= 'time', ylab = 'Concentration',"l",xaxt = "n", yaxt ="n")
+#axis(1,seq(1980, 2020,10),seq(1980, 2020, 10))
+#axis(2,seq(0, 1000000, 100000), seq(0, 1000000, 100000), las = 1, mgp = c(1, 1, 0))
+lines(10^(pred$pred),col='blue')
+lines(10^(pred$pred+2*pred$se),col='orange')
+lines(10^(pred$pred-2*pred$se),col='orange')
+library(forecast)
+futurVal <- forecast(m3,h=3, level=c(99.5))
+plot(forecast(futurVal),xlab= 'month', ylab = 'Concentration')

@@ -1,12 +1,12 @@
-+# fake data
+# fake data
 
 R_dimer_syn:
     $pool > dimer
     kd
 R_dimer_pro:
     dimer > dimepromoter
-    k2*dimer 
-R_dimer_inact: 
+    k2*dimer
+R_dimer_inact:
     dimepromoter > dimer
     k3*dimepromoter
 R_mRNA_syn:
@@ -30,8 +30,3 @@ dimer = 2
 dimepromoter = 10
 mRNA = 10
 Protein = 375
-
-
-
-
-

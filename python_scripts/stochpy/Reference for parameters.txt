@@ -1,0 +1,26 @@
+﻿Reference:
+K5, maturation time: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5765880/
+
+
+K1, dimerization time: https://www.frontiersin.org/articles/10.3389/fimmu.2019.01693/full#F1 
+
+
+K2: https://www.frontiersin.org/articles/10.3389/fimmu.2019.01693/full#F1 
+
+
+https://arxiv.org/pdf/1310.6503.pdf
+
+
+https://pubs.acs.org/doi/pdf/10.1021/bi00152a047
+
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC153954/
+
+
+https://mcb.asm.org/content/mcb/17/11/6546.full.pdf
+
+
+https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2007.06070.x
+
+
+K3: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001528#:~:text=The%20Promoter%20Sequence%20Determines%20How,by%20differences%20in%20burst%20frequency.

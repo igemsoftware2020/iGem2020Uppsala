@@ -45,10 +45,8 @@
 
 # The program has been tested only on CHARMM stream files containing topology and parameters of a single molecule.
 
-import string
 import re
 import sys
-import os
 import math
 import numpy as np
 import networkx as nx

@@ -54,7 +54,7 @@ for i in regions:
         total = sum(results[i])
         if total == 0:
             total = 1
-        percents = list()
+        percents = []
         for q in results[i]:
             percents.append(q/total)
         results[i] = percents

@@ -1,4 +1,4 @@
-# fake data
+# simulated data
 
 R_dimer_syn:
     $pool > dimer
@@ -30,3 +30,4 @@ dimer = 5
 dimepromoter = 50
 mRNA = 0
 Protein = 0
+matureProtein = 0

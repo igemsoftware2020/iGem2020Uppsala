@@ -1,4 +1,4 @@
-# fake data
+# simulated data
 
 R_dimer_syn:
     $pool > dimer
@@ -7,22 +7,22 @@ R_dimer_pro:
     dimer > dimepromoter
     k2*dimer
 R_dimer_inact:
-    dimepromoter > dimer
+    dimepromoter > mRNA
     k3*dimepromoter
 R_mRNA_syn:
-    dimepromoter > mRNA + dimepromoter
-    k4*(dimepromoter/(dimepromoter+kX))
+    mRNA > mRNA + Protein
+    k4*mRNA
 R_Prot_syn:
-    mRNA > Protein + mRNA
-    k5*mRNA
+    Protein > matureProtein
+    k5*Protein
 
 # InitPar
 kd = 5
-k2 = 30
-k3 = 0.5
-kX = 2
-k4 = 2
-k5 = 0.2
+k2 = 60
+k3 = 0.3
+k4 = 0.20834
+k5 = 0.0136
+
 
 
 # InitVar

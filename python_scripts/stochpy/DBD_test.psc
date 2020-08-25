@@ -21,8 +21,8 @@ kd = 5
 k2 = 30
 k3 = 0.5
 kX = 2
-k4 = 1.36094
-k5 = 0.0136
+k4 = 2
+k5 = 0.2
 
 
 # InitVar
@@ -30,3 +30,9 @@ dimer = 5
 dimepromoter = 50
 mRNA = 0
 Protein = 0
+
+# Event definitions
+Event: reset1, _TIME_ >= 300, 0.0
+{
+dimer = 1000
+}

@@ -18,15 +18,15 @@ R_Prot_syn:
 
 # InitPar
 kd = 5
-k2 = 60
+k2 = 30
 k3 = 0.5
 kX = 2
 k4 = 1.36094
 k5 = 0.0136
-mu = 1/86.56
+
 
 # InitVar
-dimer = 2
-dimepromoter = 10
-mRNA = 10
-Protein = 375
+dimer = 5
+dimepromoter = 50
+mRNA = 0
+Protein = 0

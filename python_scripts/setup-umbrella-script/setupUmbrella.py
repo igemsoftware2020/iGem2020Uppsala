@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 __description__ = \
-"""
+    """
 Take a file containing frame number vs. distance, then identify frames that
 sample those distances at approximately sample_interval.  Optionally takes an
 arbitrary number of template files.  The program searches the contents of these
@@ -17,7 +17,10 @@ __date__ = "120314"
 __usage__ = "setupUmbrella.py distance_file sample_interval [template_file1 template_file2 ...]"
 __version__ = "0.1"
 
-import sys, os, re
+import sys
+import os
+import re
+
 
 def readDistanceFile(distance_file):
     """
@@ -35,13 +38,13 @@ def readDistanceFile(distance_file):
     """
 
     # Read file
-    f = open(distance_file,'r')
+    f = open(distance_file, 'r')
     lines = f.readlines()
     f.close()
 
     # Read the data from the bottom
     out_dict = {}
-    for i in range(len(lines)-1,-1,-1):
+    for i in range(len(lines)-1, -1, -1):
 
         # Split on white-space; grab frame/distance
         columns = lines[i].split()
@@ -53,18 +56,18 @@ def readDistanceFile(distance_file):
         if key in out_dict:
             break
         else:
-           out_dict[key] = value
+            out_dict[key] = value
 
     # Now put the values into a simple list, sorting to make sure that they are
     # in the correct order.
     keys = out_dict.keys()
     keys.sort()
-    out = [(k,out_dict[k]) for k in keys]
+    out = [(k, out_dict[k]) for k in keys]
 
     return out
 
 
-def sampleDistances(distance_table,sample_interval):
+def sampleDistances(distance_table, sample_interval):
     """
     Go through the distances list and sample frames at sample_interval.
     Appropriate samples are identified by looking forward through the
@@ -97,13 +100,13 @@ def sampleDistances(distance_table,sample_interval):
     return sampled_indexes
 
 
-def createOutputFile(template_file,frame_number,search_string="XXX"):
+def createOutputFile(template_file, frame_number, search_string="XXX"):
     """
     Look for instances of the search string in a template file and replace with
     the frame number in a new file.
     """
 
-    out_file = "frame-%i_%s" % (frame_number,template_file)
+    out_file = "frame-%i_%s" % (frame_number, template_file)
 
     # Prompt the user before wiping out an existing file
     if os.path.exists(out_file):
@@ -113,14 +116,14 @@ def createOutputFile(template_file,frame_number,search_string="XXX"):
             return None
 
     # Read the contents of the template file
-    f = open(template_file,'r')
+    f = open(template_file, 'r')
     file_contents = f.read()
     f.close()
 
     # Write out the template file contents, replacing all instances of
     # the search string with the frame number
-    f = open(out_file,'w')
-    f.write(re.sub(search_string,"%i" % frame_number,file_contents))
+    f = open(out_file, 'w')
+    f.write(re.sub(search_string, "%i" % frame_number, file_contents))
     f.close()
 
 
@@ -136,7 +139,7 @@ def main(argv=None):
     try:
         distance_file = argv[0]
         sample_interval = float(argv[1])
-    except (IndexError,ValueError):
+    except (IndexError, ValueError):
         err = "Incorrect command line arguments!\n\n%s\n\n" % __usage__
         raise IOError(err)
 
@@ -148,7 +151,7 @@ def main(argv=None):
 
     # Figure out which frames to use
     distance_table = readDistanceFile(distance_file)
-    sampled_indexes = sampleDistances(distance_table,sample_interval)
+    sampled_indexes = sampleDistances(distance_table, sample_interval)
 
     # If any template files were specified, use them to make frame-specific
     # output
@@ -158,10 +161,10 @@ def main(argv=None):
         for t in template_files:
             for i in sampled_indexes:
                 frame = distance_table[i][0]
-                createOutputFile(t,frame,search_string="XXX")
+                createOutputFile(t, frame, search_string="XXX")
 
     # Print out summary of the frames we identified
-    out = ["%10s%10s%10s\n" % ("frame","dist","d_dist")]
+    out = ["%10s%10s%10s\n" % ("frame", "dist", "d_dist")]
     for i in range(len(sampled_indexes)):
 
         frame = distance_table[sampled_indexes[i]][0]
@@ -172,7 +175,7 @@ def main(argv=None):
             prev_dist = distance_table[sampled_indexes[i-1]][1]
             delta_dist = "%10.3f" % (dist - prev_dist)
 
-        out.append("%10i%10.3f%s\n" % (frame,dist,delta_dist))
+        out.append("%10i%10.3f%s\n" % (frame, dist, delta_dist))
 
     return out
 
@@ -180,4 +183,4 @@ def main(argv=None):
 # If called from the command line...
 if __name__ == "__main__":
     out = main()
-    print( "".join(out))
+    print("".join(out))

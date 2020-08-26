@@ -1,6 +1,11 @@
 #!usr/bin/env python
 
 from __future__ import print_function
+import os
+from pyrosetta import *
+from rosetta import *
+from rosetta.protocols.scoring import Interface
+import optparse    # for sorting options
 
 ################################################################################
 # A GENERAL EXPLANATION
@@ -78,15 +83,12 @@ The method sample_refinement:
 
 """
 
-import optparse    # for sorting options
 
 # the Interface object is required by this script
-from rosetta.protocols.scoring import Interface
-from rosetta import *
-from pyrosetta import *
 
-init(extra_options = "-constant_seed")  # WARNING: option '-constant_seed' is for testing only! MAKE SURE TO REMOVE IT IN PRODUCTION RUNS!!!!!
-import os; os.chdir('.test.output')
+# WARNING: option '-constant_seed' is for testing only! MAKE SURE TO REMOVE IT IN PRODUCTION RUNS!!!!!
+init(extra_options="-constant_seed")
+os.chdir('.test.output')
 
 # normally, init() works fine
 # for this sample script, we want to ease comparison by making sure all random
@@ -102,9 +104,11 @@ import os; os.chdir('.test.output')
 # Methods
 
 # performs general scanning
-def scanning(pdb_filename, partners, mutant_aa = 'A',
-        interface_cutoff = 8.0, output = False,
-        trials = 1, trial_output = ''):
+
+
+def scanning(pdb_filename, partners, mutant_aa='A',
+             interface_cutoff=8.0, output=False,
+             trials=1, trial_output=''):
     """
     Performs "scanning" at an interface within  <pdb_filename>  between
         <partners>  by mutating relevant residues to  <mutant_aa>  and repacking
@@ -129,7 +133,7 @@ def scanning(pdb_filename, partners, mutant_aa = 'A',
     # 3. create ScoreFuncions for the Interface and "ddG" calculations
     # the pose's Energies objects MUST be updated for the Interface object to
     #    work normally
-    scorefxn = get_fa_scorefxn() #  create_score_function('standard')
+    scorefxn = get_fa_scorefxn()  # create_score_function('standard')
     scorefxn(pose)    # needed for proper Interface calculation
 
     # setup a "ddG" ScoreFunction, custom weights
@@ -157,7 +161,7 @@ def scanning(pdb_filename, partners, mutant_aa = 'A',
     #    these score changes are useful to QUALITATIVELY defining "hotspot"
     #    residues
     # this script does not use a PyJobDistributor since no PDB files are output
-    for trial in range( trials ):
+    for trial in range(trials):
         # store the ddG values in a dictionary
         ddG_mutants = {}
         for i in range(1, pose.total_residue() + 1):
@@ -172,32 +176,34 @@ def scanning(pdb_filename, partners, mutant_aa = 'A',
                         str(pose.pdb_info().number(i)) + '->' + mutant_aa
                 # determine the interace score change upon mutation
                 ddG_mutants[i] = interface_ddG(pose, i, mutant_aa,
-                    movable_jumps, ddG_scorefxn, interface_cutoff, filename )
+                                               movable_jumps, ddG_scorefxn, interface_cutoff, filename)
 
         # output results
-        print( '='*80 )
-        print( 'Trial', str( trial + 1 ) )
-        print( 'Mutants (PDB numbered)\t\"ddG\" (interaction dependent score change)' )
-        residues = list( ddG_mutants.keys() )  # list(...) conversion is for python3 compatbility
+        print('='*80)
+        print('Trial', str(trial + 1))
+        print('Mutants (PDB numbered)\t\"ddG\" (interaction dependent score change)')
+        # list(...) conversion is for python3 compatbility
+        residues = list(ddG_mutants.keys())
         residues.sort()    # easier to read
         display = [pose.sequence()[i - 1] +
-            str(pose.pdb_info().number(i)) + mutant_aa + '\t' +
-            str(ddG_mutants[i]) + '\n'
-            for i in residues]
-        print( ''.join(display)[:-1] )
-        print( '='*80 )
+                   str(pose.pdb_info().number(i)) + mutant_aa + '\t' +
+                   str(ddG_mutants[i]) + '\n'
+                   for i in residues]
+        print(''.join(display)[:-1])
+        print('='*80)
 
         # write to file
-        f = open(trial_output + '_' + str(trial + 1) + '.txt' , 'w' )
+        f = open(trial_output + '_' + str(trial + 1) + '.txt', 'w')
         f.writelines(display)
         f.close()
 
-    #### alternate output using scanning_analysis (see below), only display
-    ####    mutations with "deviant" score changes
-    print( 'Likely Hotspot Residues' )
+    # alternate output using scanning_analysis (see below), only display
+    # mutations with "deviant" score changes
+    print('Likely Hotspot Residues')
     for hotspot in scanning_analysis(trial_output):
-        print( hotspot )
-    print( '='*80 )
+        print(hotspot)
+    print('='*80)
+
 
 """
 1.  creates a copy of the pose
@@ -210,8 +216,10 @@ def scanning(pdb_filename, partners, mutant_aa = 'A',
         -to a PDB file
 """
 # returns the "interaction energy" for the pose with a given mutation
-def interface_ddG( pose, mutant_position, mutant_aa, movable_jumps, scorefxn = '',
-        cutoff = 8.0, out_filename = ''):
+
+
+def interface_ddG(pose, mutant_position, mutant_aa, movable_jumps, scorefxn='',
+                  cutoff=8.0, out_filename=''):
     # 1. create a reference copy of the pose
     wt = Pose()    # the "wild-type"
     wt.assign(pose)
@@ -236,7 +244,7 @@ def interface_ddG( pose, mutant_position, mutant_aa, movable_jumps, scorefxn = '
     #    for this application since the area around the mutation is already
     #    repacked
     mutant = mutate_residue(mutant, mutant_position, mutant_aa,
-        0.0, scorefxn)
+                            0.0, scorefxn)
 
     # 5. calculate the "interaction energy"
     # the method calc_interaction_energy is exposed in PyRosetta however it
@@ -245,23 +253,23 @@ def interface_ddG( pose, mutant_position, mutant_aa, movable_jumps, scorefxn = '
     # an alternate method for manually separating and scoring is provided called
     #    calc_binding_energy (see Interaction Energy vs. Binding Energy below)
     wt_score = calc_binding_energy(wt, scorefxn,
-        mutant_position, cutoff)
+                                   mutant_position, cutoff)
     mut_score = calc_binding_energy(mutant, scorefxn,
-        mutant_position, cutoff)
-    #### the method calc_interaction_energy separates an input pose by
-    ####    500 Angstroms along the jump defined in a Vector1 of jump numbers
-    ####    for movable jumps, a ScoreFunction must also be provided
-    #### if setup_foldtree has not been applied, calc_interaction_energy may be
-    ####    wrong (since the jumps may be wrong)
+                                    mutant_position, cutoff)
+    # the method calc_interaction_energy separates an input pose by
+    # 500 Angstroms along the jump defined in a Vector1 of jump numbers
+    # for movable jumps, a ScoreFunction must also be provided
+    # if setup_foldtree has not been applied, calc_interaction_energy may be
+    # wrong (since the jumps may be wrong)
     #wt_score = calc_interaction_energy(wt, scorefxn, movable_jumps)
     #mut_score = calc_interaction_energy(mutant, scorefxn, movable_jumps)
     ddg = mut_score - wt_score
 
     # 6. output data (optional)
     # -export the mutant structure to PyMOL (optional)
-    mutant.pdb_info().name( pose.sequence()[mutant_position -1] +
-        str( pose.pdb_info().number(mutant_position)) +
-        mutant.sequence()[mutant_position - 1])
+    mutant.pdb_info().name(pose.sequence()[mutant_position - 1] +
+                           str(pose.pdb_info().number(mutant_position)) +
+                           mutant.sequence()[mutant_position - 1])
     pymover = PyMOLMover()
     scorefxn(mutant)
     pymover.apply(mutant)
@@ -277,8 +285,10 @@ def interface_ddG( pose, mutant_position, mutant_aa, movable_jumps, scorefxn = '
 #    earlier that does not optionally repack nearby residues
 
 # replaces the residue at  <resid>  in  <pose>  with  <new_res>  with repacking
+
+
 def mutate_residue(pose, mutant_position, mutant_aa,
-        pack_radius = 0.0, pack_scorefxn = '' ):
+                   pack_radius=0.0, pack_scorefxn=''):
     """
     Replaces the residue at  <mutant_position>  in  <pose>  with  <mutant_aa>
         and repack any residues within  <pack_radius>  Angstroms of the mutating
@@ -293,20 +303,20 @@ def mutate_residue(pose, mutant_position, mutant_aa,
         MutateResidue
         pose_from_sequence
     """
-    #### a MutateResidue Mover exists similar to this except it does not pack
-    ####    the area around the mutant residue (no pack_radius feature)
+    # a MutateResidue Mover exists similar to this except it does not pack
+    # the area around the mutant residue (no pack_radius feature)
     #mutator = MutateResidue(mutant_position, mutant_aa)
-    #mutator.apply(test_pose)
+    # mutator.apply(test_pose)
 
     if pose.is_fullatom() == False:
-        IOError( 'mutate_residue only works with fullatom poses' )
+        IOError('mutate_residue only works with fullatom poses')
 
     test_pose = Pose()
     test_pose.assign(pose)
 
     # create a standard scorefxn by default
     if not pack_scorefxn:
-        pack_scorefxn = get_fa_scorefxn() #  create_score_function('standard')
+        pack_scorefxn = get_fa_scorefxn()  # create_score_function('standard')
 
     task = standard_packer_task(test_pose)
 
@@ -329,12 +339,12 @@ def mutate_residue(pose, mutant_position, mutant_aa,
         # in Python, logical expression are evaluated with priority, thus the
         #    line below appends to aa_bool the truth (True or False) of the
         #    statement i == mutant_aa
-        aa_bool.append( i == int(mutant_aa) )
+        aa_bool.append(i == int(mutant_aa))
 
     # modify the mutating residue's assignment in the PackerTask using the
     #    Vector1 of booleans across the proteogenic amino acids
     task.nonconst_residue_task(mutant_position
-        ).restrict_absent_canonical_aas(aa_bool)
+                               ).restrict_absent_canonical_aas(aa_bool)
 
     # prevent residues from packing by setting the per-residue "options" of
     #    the PackerTask
@@ -353,7 +363,9 @@ def mutate_residue(pose, mutant_position, mutant_aa,
 
 # there is a significant difference between interaction energy and binding
 #    energy (see Interaction Energy vs. Binding Energy below)
-def calc_binding_energy(pose, scorefxn, center, cutoff = 8.0):
+
+
+def calc_binding_energy(pose, scorefxn, center, cutoff=8.0):
     # create a copy of the pose for manipulation
     test_pose = Pose()
     test_pose.assign(pose)
@@ -367,7 +379,8 @@ def calc_binding_energy(pose, scorefxn, center, cutoff = 8.0):
     #    preventing them from adding noise to the score difference
     # this method of setting up a PackerTask is different from packer_task.py
     tf = standard_task_factory()    # create a TaskFactory
-    tf.push_back(core.pack.task.operation.RestrictToRepacking())    # restrict it to repacking
+    # restrict it to repacking
+    tf.push_back(core.pack.task.operation.RestrictToRepacking())
 
     # this object contains repacking options, instead of turning the residues
     #    "On" or "Off" directly, this will create an object for these options
@@ -390,12 +403,12 @@ def calc_binding_energy(pose, scorefxn, center, cutoff = 8.0):
     packer = protocols.simple_moves.PackRotamersMover(scorefxn)
     packer.task_factory(tf)
 
-    #### create a Mover for performing translation
-    #### RigidBodyTransMover is SUPPOSED to translate docking partners of a
-    ####    pose based on an axis and magnitude
-    #### test it using the PyMOLMover, it does not perform a simple translation
-    ####    I also observed a "Hbond Tripped" error when packing after applying
-    ####    the Mover, it appears to store inf and NaN values into hbonds
+    # create a Mover for performing translation
+    # RigidBodyTransMover is SUPPOSED to translate docking partners of a
+    # pose based on an axis and magnitude
+    # test it using the PyMOLMover, it does not perform a simple translation
+    # I also observed a "Hbond Tripped" error when packing after applying
+    # the Mover, it appears to store inf and NaN values into hbonds
     #transmover = RigidBodyTransMover()
     # calc_interaction_energy separates the chains by 500.0 Angstroms,
     #    so does this Mover
@@ -411,24 +424,24 @@ def calc_binding_energy(pose, scorefxn, center, cutoff = 8.0):
     before = scorefxn(test_pose)
 
     # separate the docking partners
-    #### since RigidBodyTransMover DOES NOT WORK, it is not used
-    #transmover.apply(test_pose)
+    # since RigidBodyTransMover DOES NOT WORK, it is not used
+    # transmover.apply(test_pose)
 
     # here are two methods for applying a translation onto a pose structure
     # both require an xyzVector
     xyz = rosetta.numeric.xyzVector_double_t()    # a Vector for coordinates
     xyz.x = 500.0    # arbitrary separation magnitude, in the x direction
-    xyz.y = 0.0    #...I didn't have this and it defaulted to 1e251...?
-    xyz.z = 0.0    #...btw thats like 1e225 light years,
-                   #    over 5e245 yrs at Warp Factor 9.999 (thanks M. Pacella)
+    xyz.y = 0.0  # ...I didn't have this and it defaulted to 1e251...?
+    xyz.z = 0.0  # ...btw thats like 1e225 light years,
+    #    over 5e245 yrs at Warp Factor 9.999 (thanks M. Pacella)
 
-    #### here is a hacky method for translating the downstream partner of a
+    # here is a hacky method for translating the downstream partner of a
     #    pose protein-protein complex (must by two-body!)
     chain2starts = len(pose.chain_sequence(1)) + 1
     for r in range(chain2starts, test_pose.total_residue() + 1):
         for a in range(1, test_pose.residue(r).natoms() + 1):
             test_pose.residue(r).set_xyz(a,
-                test_pose.residue(r).xyz(a) + xyz)
+                                         test_pose.residue(r).xyz(a) + xyz)
 
     # here is an elegant way to do it, it assumes that jump number 1
     #    defines the docking partners "connectivity"
@@ -437,7 +450,7 @@ def calc_binding_energy(pose, scorefxn, center, cutoff = 8.0):
     #    Jump methods, such as pose.jump(1).set_translation, however the object
     #    has not been properly constructed for manipulation, thus performing
     #    a change does not cause any problems, but is not permanently applied
-    #translate = test_pose.jump( 1 )    # copy this information explicitly
+    # translate = test_pose.jump( 1 )    # copy this information explicitly
     # adjust its translation via vector addition
     #translate.set_translation( translate.get_translation() + xyz )
     #test_pose.set_jump( 1 , translate )
@@ -466,11 +479,11 @@ def scanning_analysis(trial_output):
     filenames = os.listdir(os.getcwd())
     # remove files that don't have trial_output in their name, this assumes
     #    these are the only relevant files, otherwise this will FAIL!
-    filenames =[i for i in filenames if trial_output in i]
+    filenames = [i for i in filenames if trial_output in i]
 
     # perform an initial reading, to setup lists
     filename = filenames[0]
-    f = open(filename , 'r')
+    f = open(filename, 'r')
     data = f.readlines()
     data = [i.strip() for i in data]    # remove "\n"
     f.close()
@@ -481,7 +494,7 @@ def scanning_analysis(trial_output):
 
     # for all files beyond the first, add the "ddG" values
     for filename in filenames[1:]:
-        f = open( filename , 'r' )
+        f = open(filename, 'r')
         data = f.readlines()
         data = [i.strip() for i in data]
         f.close()
@@ -499,7 +512,7 @@ def scanning_analysis(trial_output):
 
     # extract list elements (for ddg and thus mutants) with a ddg value more
     #    than 1 standard deviation away
-    significant = [i for i in range(len(ddg)) if abs(ddg[i]-mean)>std]
+    significant = [i for i in range(len(ddg)) if abs(ddg[i]-mean) > std]
     # these are the hotspots
     hotspots = [mutants[i] for i in significant]
 
@@ -507,6 +520,7 @@ def scanning_analysis(trial_output):
 
 ################################################################################
 # INTERPRETING RESULTS
+
 
 """
 The output file(s) for this script are tab delimited columns of mutants
@@ -587,32 +601,32 @@ from its bound conformation to it solution-state conformation.
 # all defaults are for the example using "test_dock.pdb" with one trial
 #    to provide results quickly
 parser = optparse.OptionParser()
-parser.add_option('--pdb_filename', dest = 'pdb_filename',
-    default = '../test/data/test_dock.pdb',    # default example PDB
-    help = 'the PDB file containing the protein to refine')
+parser.add_option('--pdb_filename', dest='pdb_filename',
+                  default='../test/data/test_dock.pdb',    # default example PDB
+                  help='the PDB file containing the protein to refine')
 # for more information on "partners", see sample_docking step 2.
-parser.add_option('--partners', dest = 'partners',
-    default = 'E_I',    # default for the example test_dock.pdb
-    help = 'the relative chain partners for docking')
+parser.add_option('--partners', dest='partners',
+                  default='E_I',    # default for the example test_dock.pdb
+                  help='the relative chain partners for docking')
 # scanning options
-parser.add_option('--mutant_aa', dest = 'mutant_aa',
-    default = 'A',    # default to alanine, A
-    help = 'the amino acid to mutate all residues to')
-parser.add_option('--interface_cutoff', dest = 'interface_cutoff',
-    default = '8.0',    # default to 8.0 Angstroms
-    help = 'the distance (in Angstroms) to detect residues for repacking\
+parser.add_option('--mutant_aa', dest='mutant_aa',
+                  default='A',    # default to alanine, A
+                  help='the amino acid to mutate all residues to')
+parser.add_option('--interface_cutoff', dest='interface_cutoff',
+                  default='8.0',    # default to 8.0 Angstroms
+                  help='the distance (in Angstroms) to detect residues for repacking\
         near the interface')
-parser.add_option('--output', dest = 'output',
-    default = '',    # default off, do now write to file
-    help = 'if True, mutant structures are written to PDB files')
+parser.add_option('--output', dest='output',
+                  default='',    # default off, do now write to file
+                  help='if True, mutant structures are written to PDB files')
 # trials options
 parser.add_option('--trials', dest='trials',
-    default = '1',    # default to single trial for speed
-    help = 'the number of trials to perform')
-parser.add_option('--trial_output', dest = 'trial_output',
-    default = 'ddG_out',    # if a specific output name is desired
-    help = 'the name preceding all output files')
-(options,args) = parser.parse_args()
+                  default='1',    # default to single trial for speed
+                  help='the number of trials to perform')
+parser.add_option('--trial_output', dest='trial_output',
+                  default='ddG_out',    # if a specific output name is desired
+                  help='the name preceding all output files')
+(options, args) = parser.parse_args()
 
 # PDB file option
 pdb_filename = options.pdb_filename
@@ -626,7 +640,7 @@ trials = int(options.trials)
 trial_output = options.trial_output
 
 scanning(pdb_filename, partners, mutant_aa,
-    interface_cutoff, output, trials, trial_output)
+         interface_cutoff, output, trials, trial_output)
 
 ################################################################################
 # ALTERNATE SCENARIOS

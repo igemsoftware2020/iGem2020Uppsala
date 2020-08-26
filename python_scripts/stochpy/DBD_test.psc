@@ -3,6 +3,9 @@
 R_dimer_syn:
     $pool > dimer
     kd
+R_dimer_rev:
+    dimer > $pool
+    kd_rev
 R_dimer_pro:
     dimer > dimepromoter
     k2*dimer
@@ -17,7 +20,8 @@ R_Prot_syn:
     k5*Protein
 
 # InitPar
-kd = 5
+kd = 6
+kd_rev = 1/kd
 k2 = 60
 k3 = 0.3
 k4 = 0.20834

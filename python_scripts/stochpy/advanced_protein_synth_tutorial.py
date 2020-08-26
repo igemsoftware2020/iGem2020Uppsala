@@ -10,16 +10,14 @@ Created on Tue Aug  4 11:44:29 2020
 Interactive modeling session (iPython) with StochPy
 for performing sequential simulations
 """
-import stochpy, numpy as np,copy,os,matplotlib.gridspec as gridspec
-
-
-
-
 import matplotlib.gridspec as gridspec
 import os
 import copy
 import numpy as np
 import stochpy
+import
+
+
 def doSequentialSim(smod, n_generations, cell_division_times):
     for i in range(1, n_generations):
         ### divide each species between two daughter cells ###

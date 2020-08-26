@@ -4,6 +4,8 @@
 # In[52]:
 
 
+import seaborn as sns
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import scipy.stats
@@ -16,17 +18,17 @@ sele_df = pd.read_csv(sele_data, sep=',')
 
 
 # In[54]:
-#define functions
+# define functions
 
 # Creating a function that takes in x and y values:
 def spearmans_rank_correlation(xs, ys):
-    
+
     # Calculate the rank of x's
     xranks = pd.Series(xs).rank()
-    
+
     # Caclulate the ranking of the y's
     yranks = pd.Series(ys).rank()
-    
+
     # Calculate Pearson's correlation coefficient on the ranked versions of the data
     return scipy.stats.pearsonr(xranks, yranks)
 
@@ -48,19 +50,15 @@ scipy.stats.spearmanr(x, y)[0]
 # In[57]:
 
 
-import matplotlib.pyplot as plt
-import seaborn as sns
 sns.set()
 
 
 # In[58]:
 
 
-x=plt.xlabel("x")
-y=plt.ylabel("y")
+x = plt.xlabel("x")
+y = plt.ylabel("y")
 plt.show()
 
 
 # In[ ]:
-
-

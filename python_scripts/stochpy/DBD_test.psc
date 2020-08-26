@@ -34,6 +34,7 @@ dimer = 5
 dimepromoter = 50
 mRNA = 0
 Protein = 0
+matureProtein = 0
 
 # Event definitions
 Event: reset1, _TIME_ >= 300, 0.0

@@ -15,7 +15,7 @@ while IFS= read -r line; do
     if [[ $line == '[++]'* ]] ; then
         printline="yes"
     fi
-    if [[ $line == *.pdb ]] ; then
+    if [[ $line == 'pose'* ]] ; then
         printline="yes"
     fi
     # If variable is yes, print the line.

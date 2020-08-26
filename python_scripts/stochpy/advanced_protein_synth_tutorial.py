@@ -10,7 +10,7 @@ Created on Tue Aug  4 11:44:29 2020
 Interactive modeling session (iPython) with StochPy
 for performing sequential simulations
 """
-
+import stochpy, numpy as np,copy,os,matplotlib.gridspec as gridspec
 
 def doSequentialSim(smod,n_generations,cell_division_times):    
     for i in range(1,n_generations):     
@@ -31,7 +31,7 @@ def doSequentialSim(smod,n_generations,cell_division_times):
         smod.SSA.Execute(smod.settings,False) # do stochastic simulation     
     smod.FillDataStochsim() # add all data to data_stochsim object
 
-import stochpy, numpy as np,copy,os,matplotlib.gridspec as gridspec
+
 smod = stochpy.SSA('celldivision_explicit.psc',dir=os.getcwd())
 T_GENERATION = 60
 

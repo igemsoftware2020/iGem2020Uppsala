@@ -1,66 +1,25 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[52]:
+# %%
 
-
-import numpy as np
 import pandas as pd
-import scipy.stats
+from scipy.stats import spearmanr, pearsonr
 
-
-# In[53]:
-#import data
+# %%
+# import data
 sele_data = 'docking_sele.csv'
 sele_df = pd.read_csv(sele_data, sep=',')
 
-
-# In[54]:
-#define functions
-
-# Creating a function that takes in x and y values:
-def spearmans_rank_correlation(xs, ys):
-    
-    # Calculate the rank of x's
-    xranks = pd.Series(xs).rank()
-    
-    # Caclulate the ranking of the y's
-    yranks = pd.Series(ys).rank()
-    
-    # Calculate Pearson's correlation coefficient on the ranked versions of the data
-    return scipy.stats.pearsonr(xranks, yranks)
+# %%
 
 
-# In[55]:
-
-
-# Run the function
-spearmans_rank_correlation(x, y)[0]
-
-
-# In[56]:
-
-
-# Just to check our results, here it Spearman's using Scipy
-scipy.stats.spearmanr(x, y)[0]
-
-
-# In[57]:
-
-
-import matplotlib.pyplot as plt
-import seaborn as sns
-sns.set()
-
-
-# In[58]:
-
-
-x=plt.xlabel("x")
-y=plt.ylabel("y")
-plt.show()
-
-
-# In[ ]:
-
-
+for pose, i in enumerate(range(0, 44, 4)):
+    x = sele_df['Avg Affinity Kd'][i:i + 4]
+    exp = sele_df['Avg Affinity Kd'][40:44]
+    correlation, pval = spearmanr(x, exp)
+    print('pose ', str(pose), 'compared to experimental - spearman')
+    print(f'correlation={correlation:.6f}, p-value={pval:.6f}')
+    correlationp, pvalp = pearsonr(x, exp)
+    print('pose ', str(pose), 'compared to experimental - pearson')
+    print(f'correlation={correlationp:.6f}, p-value={pvalp:.6f}')

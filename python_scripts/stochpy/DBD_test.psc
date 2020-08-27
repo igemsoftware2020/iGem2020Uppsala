@@ -33,6 +33,9 @@ R_Prot_syn:
 R_Prot_deg:
     Protein > $pool
     kProteindeg*Protein
+R_Prot_maturation:
+    Protein > Protein_mature
+    k_prot_mat*Protein
 
 # InitPar
 kd = 6
@@ -44,8 +47,9 @@ k3 = 0.3
 k4 = 0.20834
 k5 = 0.0136
 kX = 2
-kmRNAdeg = 1
-kProteindeg = 1
+kmRNAdeg = 0.001
+kProteindeg = 0.0001
+k_prot_mat = 0.1
 
 
 
@@ -53,8 +57,9 @@ kProteindeg = 1
 dimer = 5
 dimeractive = 1
 dimepromoter = 50
-mRNA = 0
-Protein = 0
+mRNA = 0.5
+Protein = 0.5
+Protein_mature = 0.5
 
 
 # Event definitions

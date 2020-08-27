@@ -6,47 +6,56 @@ R_dimer_syn:
 R_dimer_deg:
     dimer > $pool
     kdimerdeg*dimer
-R_dimer_rev:
-    dimer > $pool
-    kd_rev
+R_dimera_deg:
+    dimeractive > $pool
+    kdimerdeg*dimeractive
+R_dimer_active:
+    dimer > dimeractive
+    kActivate*dimer  
+R_dimer_reverse: 
+    dimeractive > dimer
+    kreverse*dimeractive
 R_dimer_pro:
     dimer > dimepromoter
     k2*dimer
-R_dimer_inact:
+R_dimerpro_act:
     dimepromoter > mRNA
     k3*dimepromoter
 R_mRNA_syn:
-    mRNA > mRNA + Protein
-    k4*mRNA
+    dimepromoter > mRNA + dimepromoter
+    k4*(dimepromoter/(dimepromoter+kX))
 R_mRNA_deg:
     mRNA > $pool
     kmRNAdeg*mRNA
 R_Prot_syn:
-    Protein > matureProtein
-    k5*Protein
+    mRNA > Protein + mRNA
+    k5*mRNA
 R_Prot_deg:
-    matureProtein > $pool
-    kProteindeg*matureProtein
+    Protein > $pool
+    kProteindeg*Protein
 
 # InitPar
 kd = 6
-kd_rev = 1/kd
+kdimerdeg = 1/20
+kActivate = 5
+kreverse = 0.5
 k2 = 60
 k3 = 0.3
 k4 = 0.20834
 k5 = 0.0136
-kdimerdeg = 1/20
-kmRNAdeg = 1.36094
-kProteindeg = 1/90
+kX = 2
+kmRNAdeg = 1
+kProteindeg = 1
 
 
 
 # InitVar
 dimer = 5
+dimeractive = 1
 dimepromoter = 50
 mRNA = 0
 Protein = 0
-matureProtein = 0
+
 
 # Event definitions
 Event: reset1, _TIME_ >= 300, 0.0

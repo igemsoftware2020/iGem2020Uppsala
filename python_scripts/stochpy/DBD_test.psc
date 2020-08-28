@@ -16,7 +16,7 @@ R_dimer_pro_syn:
     dimeractive > dimerpromoter
     kDNAbinding*dimeractive
 R_mRNA_syn:
-    dimepromoter > mRNA
+    dimerpromoter > mRNA
     kmRNA_syn*dimerpromoter
 R_mRNA_deg:
     mRNA > $pool

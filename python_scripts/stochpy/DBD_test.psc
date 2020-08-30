@@ -51,11 +51,11 @@ kProtmat_deg = 1/90
 
 # InitVar
 dimer = 100
-dimeractive = 1
-dimerpromoter = 5
-mRNA = 0.5
-Protein = 0.5
-MatureProtein = 0.5
+dimeractive = 15
+dimerpromoter = 15
+mRNA = 10
+Protein = 1
+MatureProtein = 1
 
 # Event definitions
 Event: sample_add, _TIME_ >= 300, 0.0

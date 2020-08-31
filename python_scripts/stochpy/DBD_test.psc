@@ -8,8 +8,8 @@ R_dimer_deg:
     kdimerdeg*dimer
 R_dimer_active:
     dimer > dimeractive
-    kActivate*dimer  
-R_dimer_reverse: 
+    kActivate*dimer
+R_dimer_reverse:
     dimeractive > dimer
     kreverse*dimeractive
 R_dimer_pro_syn:
@@ -58,7 +58,7 @@ Protein = 1
 MatureProtein = 1
 
 # Event definitions
-Event: sample_add, _TIME_ >= 300, 0.0
+Event: sample_add, _TIME_ >= 100, 0.0
 {
 dimer = 1000
 }

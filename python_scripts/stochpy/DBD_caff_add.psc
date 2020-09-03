@@ -16,7 +16,7 @@ R_dimer_pro_syn:
     dimercaff > dimerpromoter
     kDNAbinding*dimercaff
 R_mRNA_syn:
-    dimerpromoter > mRNA + dimercaff
+    dimerpromoter > mRNA + DBD + caff
     kmRNA_syn*dimerpromoter
 R_mRNA_deg:
     mRNA > $pool
@@ -43,8 +43,8 @@ kdimercaffdiss = 0.001
 
 kDNAbinding = 60
 
-kmRNA_syn = 0.3
-kmRNAdeg = 1/10
+kmRNA_syn = 5
+kmRNAdeg = 1/30
 
 kProtsyn = 0.0136 # from literature
 kProteindeg = 1/90
@@ -54,8 +54,8 @@ kProtmat_deg = 1/90
 
 
 # InitVar
-DBD = 100
-caff = 0.01 
+DBD = 200
+caff = 0.01
 dimercaff = 0.1
 dimerpromoter = 0.1
 mRNA = 0.1

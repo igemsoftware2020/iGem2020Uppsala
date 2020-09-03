@@ -2,7 +2,7 @@
 
 R_dimer_syn:
     $pool > DBD
-    kDBD_prod
+    kDBD_prod*DBD
 R_dimer_deg:
     DBD > $pool
     kDBDdeg*DBD
@@ -10,13 +10,13 @@ R_dimer_caff:
     DBD + caff > dimercaff
     kdimercaffbind*caff
 R_dimer_reverse:
-    dimercaff > DBD
+    dimercaff > DBD + caff
     kdimercaffdiss*dimercaff
 R_dimer_pro_syn:
     dimercaff > dimerpromoter
     kDNAbinding*dimercaff
 R_mRNA_syn:
-    dimerpromoter > mRNA
+    dimerpromoter > mRNA + dimercaff
     kmRNA_syn*dimerpromoter
 R_mRNA_deg:
     mRNA > $pool
@@ -36,10 +36,11 @@ R_MatureProtein_deg:
 
 # InitPar
 kDBD_prod = 6
-kDBDdeg = 1/20
+kDBDdeg = 1/90
 
 kdimercaffbind = 5
-kdimercaffdiss = 0.5
+kdimercaffdiss = 0.001
+
 kDNAbinding = 60
 
 kmRNA_syn = 0.3
@@ -54,9 +55,9 @@ kProtmat_deg = 1/90
 
 # InitVar
 DBD = 100
-caff = 1e10-8
-dimercaff = 15
-dimerpromoter = 15
+caff = 0.1
+dimercaff = 1
+dimerpromoter = 1
 mRNA = 10
 Protein = 1
 MatureProtein = 1

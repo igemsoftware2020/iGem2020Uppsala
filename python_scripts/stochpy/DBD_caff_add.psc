@@ -55,12 +55,12 @@ kProtmat_deg = 1/90
 
 # InitVar
 DBD = 100
-caff = 0.1
-dimercaff = 1
-dimerpromoter = 1
-mRNA = 10
-Protein = 1
-MatureProtein = 1
+caff = 0.01 
+dimercaff = 0.1
+dimerpromoter = 0.1
+mRNA = 0.1
+Protein = 0.1
+MatureProtein = 0.1
 
 
 # Event definitions

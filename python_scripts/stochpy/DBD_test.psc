@@ -60,5 +60,5 @@ MatureProtein = 1
 # Event definitions
 Event: sample_add, _TIME_ >= 100, 0.0
 {
-dimer = 1000
+dimeractive = 1000
 }

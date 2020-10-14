@@ -39,10 +39,44 @@ pose9 BF10,0.000003
 pose9 A23,0.00003275
 pose9 A44,1.42E-06
 pose9 A50,0.000019375
-pose10 BF10,	6.425E-07
-pose10 A23,	0.000008075
-pose10 A44,	0.000038
-pose10 A50,	0.0000285
+pose10 BF10,"	6.425E-07"
+pose10 A23,"	0.000008075"
+pose10 A44,"	0.000038"
+pose10 A50,"	0.0000285"
+21275-firepose1_BF10_refined_summary,5.125E-08
+21276-firepose1A23_swiss_refined_summary,3.08E-09
+21277-firepose1A23_swiss_refined_summary,3.55E-08
+21408-firepose2A23_swiss_refined_summary,9.425E-07
+21409-firepose2A44_swiss_refined_summary,1.875E-07
+21410-firepose2BF10_swiss_refined_summary,9.425E-07
+21411-firepose2A50_swiss_refined_summary,0.000000113
+21412-firepose6BF10_swiss_refined_summary,0.0008775
+21413-firepose6A23_swiss_refined_summary,0.0004575
+21414-firepose6A44_swiss_refined_summary,0.0002225
+21415-firepose6A50_swiss_refined_summary,0.00007475
+21417-firepose1A50_swiss_refined_summary,5.825E-09
+21419-firepose3A50_swiss_refined_summary,8.15E-08
+21420-firepose3BF10_swiss_refined_summary,1.135E-08
+21422-firepose3A23_swiss_refined_summary,1.6375E-07
+21475-firepose4A23_refined_summary,0.0003325
+21476-firepose4A44_refined_summary,0.00038
+21477-firepose4A50_refined_summary,0.0002225
+21480-firepose5A23_refined_summary,0.000000068
+21481-firepose5A44_refined_summary,2.4945E-06
+21482-firepose5BF10_refined_summary,0.000000335
+21484-firepose7A23_refined_summary,2.175E-07
+21485-firepose7A44_refined_summary,1.1075E-07
+21486-firepose7A50_refined_summary,1.925E-07
+21487-firepose7BF10_refined_summary,2.225E-07
+21489-firepose8A23_refined_summary,8.875E-08
+21490-firepose8A44_refined_summary,2.105E-09
+21492-firepose8BF10_refined_summary,4.475E-09
+21493-firepose9A23_refined_summary,2.475E-08
+1494-firepose9A44_refined_summary,1.2575E-08
+21495-firepose9A50_refined_summary,1.6E-09
+21496-firepose10A23_refined_summary,0.000000004
+21498-firepose10A50_refined_summary,2.285E-09
+21499-firepose10BF10_refined_summary,1.215E-09
 exp BF10,4.00E-10
 exp A44,3.70E-09
 exp A50,2.20E-09

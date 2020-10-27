@@ -2,7 +2,7 @@
 
 R_dimer_pro_syn:
     dimercaff + free > dimerpromoter
-    k1*dimer*free
+    k1*dimercaff*free
 R_dimer_pro_deg:
     dimerpromoter > dimercaff + free
     k2*dimerpromoter
@@ -26,8 +26,10 @@ R_MatureProtein_deg:
     kProtmat_deg*MatureProtein
 
 # InitPar
+
 k1 = 0.06
 k2 = 0.06
+
 kmRNA_syn = 0.03
 kmRNAdeg = 1/1000
 
@@ -37,7 +39,7 @@ kProtmat = 0.0316 #from literature
 kProtmat_deg = 1/90
 
 # InitVar
-dimercaff = 472
+dimercaff = 4000
 free = 100
 dimerpromoter = 15
 mRNA = 1/100

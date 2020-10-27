@@ -32,7 +32,7 @@ R_MatureProtein_deg:
     kProtmat_deg*Protein
 
 # InitPar
-Caff = 1000
+Caff = 472
 kDNAbinding = 0.0006
 kmRNA_syn = 0.0003
 kmRNAdeg = 1/1000
@@ -52,5 +52,5 @@ MatureProtein = 1
 # Event definitions
 Event: sample_add, _TIME_ >= 100, 0.0
 {
-dimeractive = 1000
+dimer = 10000
 }

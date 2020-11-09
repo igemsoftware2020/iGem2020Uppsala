@@ -1,0 +1,25 @@
+##Introduction##
+  How to load and run a docking simulation in ZDOCK
+
+##Materials##
+ *pdb file of the target protein
+      this is the larger protein and will be locked in space during the docking
+      We will use the nanobody here
+ *pdb file for the second protien
+      This is the HSP16.3 pdb file in the modelling/HSP16_3/ folder on the google drive
+
+##Procedure##
+
+#Fileprep
+1. Download the pdb files from the proteindatabank,
+
+#Submitting for docking
+2. Add the nanobody pdb file into the protein 1 field
+3. add the HSP16.3 pdb file into the second field
+4. Select the residues which are in the CDR regions on the nanobody, on swiss model they are the areas which are orange when looking at the sequence. If you can't figure it out ask seb
+
+#File handling
+5. Save all the files it offers to you, especially the top 10 complexes
+6. these complexes only seem to work in pymol, so use pymol to look at them
+7. check where the nanobody is bound
+8. If you want to import to maestro, use save molecule in pymol and save it as a mol2 file (other formats may work, I only tested mol2, if it works with other formats add them here)

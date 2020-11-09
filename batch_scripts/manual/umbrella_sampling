@@ -1,0 +1,88 @@
+##Introduction##
+    This method is a form of steered molecular dynamics, called umbrella sampling because during the simulation you take snapshots of the amount of force holding the proteins together, you need to take enough snapshots to gte enough coverage of the system, thus covering the total energy graph, like how an umbrella covers you
+
+##Materials##
+ *Maestro
+ *UPPMAX
+ *VMD
+ *Docking pose to use as a starting point
+
+##Procedure##
+#proteinprep
+1. In maestro, open a docking pose from ROSIE, HADDOCK, ZDOCK, etc
+2. Do the proteinprep procedure in the proteinprep protocol, but using the whole complex, select remove original hydrogens
+3. Export this complex as a pdb file with a descriptive name,  and ensure that write SEQRES and CONNECT bonds options are deselected
+4. Ensure that the nanobody is named chain B and HSP is chain A, if not, then use the chain_rename.py script and ensure the resulting file is correct after your modifications
+
+#GROMACS - Steered MD
+5. Instructions are written in the numbered points
+  commands are written here, enter them into the terminal/console or wherever the instructions specify
+6. Start a new terminal and login into UPPMAX rackham - username@rackham.uppmax.uu.se
+  if you haven't already, set up identification using SSH keys,  check the UPPMAX userguides to find out how
+7. Make a new directory for your project, umbrella1 for example
+  mkdir umbrella1
+8.Enter the folder you just made
+  cd umbrella1
+9. Use filezilla, rsync, or scp to transfer your pdb file to the folder you made
+  filezilla is by far the easiest and if you have SSH key authentication it's as simple as dragging and dropping, stop what you're doing and go set up SSH authentication and filezilla now.
+10. To start gromacs type this command
+  ml gromacs
+11. pdb2gmx   choose theGROMOS96 53A6 parameter set, SPC water
+  gmx pdb2gmx -f YOURPDB.pdb -ignh -o complex.gro
+12. Since we want chain B (our nanobody) to remain still while we pull the HSP, we need to add some extra instructions to restrain the molecule in space. Modify topol_Protein_chain_B.itp to include the following lines (at the end of the file):
+    #ifdef POSRES_B
+    #include "posre_Protein_chain_B.itp"
+    #endif
+13. Next we will define a box that the protein will live in and that we will fill with water, this step may require some math on your part, for my complex, it was orientated in such a way that the following command put the protein in the correct position with a correct box:
+  gmx editconf -f complex.gro -o newbox.gro -center 5 7.4 3.3 -box 20 14.8 6.6
+14. To ensure you've placed your molecules correctly, run the command, then download newbox.gro, load it into VMD, enter the tk console (in the extensions menu) and type in:
+  pbc box
+15. If your proteins are properly placed with lots of space for HSP to be pulled, you can continue.
+16. First we solvate, just as we did in the lysozyme tutorial, then we will add ion using genion and the ions.mdp file which is on the github, then we add 100mM of NaCl, when promted, select group 13 to replace water molecules with ions. The correct files are located in the umbrella folder in the batch script section of the github
+  gmx solvate -cp newbox.gro -cs spc216.gro -o solv.gro -p topol.top
+  gmx grompp -f ions.mdp -c solv.gro -p topol.top -o ions.tpr
+  gmx genion -s ions.tpr -o solv_ions.gro -p topol.top -pname NA -nname CL -neutral -conc 0.1
+17. Now we will do energy minimization like in the lysozyme tutorial, but then we will only do a NPT equilibriation. mdp files can be found on the github, as we as the batch scripts for running them. The mdrun commands are part of the batch script, and should only take 10-20 minutes to complete.
+  gmx grompp -f minim.mdp -c solv_ions.gro -p topol.top -o em.tpr
+  gmx mdrun -v -deffnm em
+  gmx grompp -f npt.mdp -c em.gro -p topol.top -r em.gro -o npt.tpr
+  gmx mdrun -deffnm npt
+  NOTE - you may need to add the -maxwarn flag if there are too many warnings, many can be ignored, some must be dealt with, it's up to you to determine.
+18.Now we do the actual sampling run, we will use the md_pull.mdp file, which has been edited quite a bit from the original in the tutorial, so ensure that the parameters match yours, for example my system was orientated along the x axis, but the original was along the z axis, so I had to alter the pull_coord_dim paramter to match. Use google on any parameter to find out what it means.
+  Your pbcatom needs to be one in the center-ish of your protein, but in a section near the interface of the two proteins, gromacs will throw a warning if your pbcatoms are too far apart
+19. Before running, you must specify which chain is which, (but we already dealt with that! you still need to double check) .gro files don't include chain information, but that information gets baked into the topology so it needs to be correct from the beginning. We use the make_ndx command to create an index that gromacs can use to identify the chains. Check the residue numbers are correct for your system
+  gmx make_ndx -f npt.gro
+    ...
+    > r 1-121
+    > name 19 Chain_B
+    > r 145-288
+    > name 20 Chain_A
+    > q
+20. Now we run the steered MD simulation
+  gmx grompp -f md_pull.mdp -c npt.gro -p topol.top -r npt.gro -n index.ndx -t npt.cpt -o pull.tpr
+  NOTE - you may need to add the -maxwarn flag if there are too many warnings, many can be ignored, some must be dealt with, it's up to you to determine.
+21 Use the md_pull.sh from the github to run the command
+22. During the run, you can download the .gro and .xtc files without interuppting anything, load the .gro into vmd, then load the .xtc file into the .gro molecule, and get a sneak peek at the simulation, if it looks good then sit back and relax and wait for it to finish.
+#Umbrella Sampling
+23. After the simulation finished use the get_distances.sh script to generate configurations which we will analyze, the script generate configurations for each frame, and then calls gmx distance to calculate the distance between the center of mass of each protein, look through the script and ensure it is correct for your filenames, especially ensure that the groups it is looking for are correct, the groups are listed in the index.ndx file and called by their 0 indexed position.
+24. To run the script, you should run it interactively
+  https://www.uppmax.uu.se/digitalAssets/602/c_602260-l_1-k_slurmatuppmax.pdf
+  for details on how to run interactively
+25. The actual code you run is:
+  interactive -A PROJECTNAME -t (amount of time you want)
+  bash get-distances.sh
+26. We choose configurations that are 0.2nm apart to get a reasonably good resolution image of the energy, which you will choose from the summary_distances.dat file, luckily, we have a python script that will do it all for us.
+27. Use the setupUmbrella.py script in the setup-umbrella-script folder in the python_scripts folder in the github repo
+  place setupumbrella.py, run-umbrella.sh, umbrella-sampling.sh files into the folder with all the conf files
+  module load python/2.7.6
+  python setupUmbrella.py summary_distances.dat 0.2 run-umbrella.sh &> caught-output.txt
+28. Run the umbrella_sampling_jobs.sh file:
+  bash umbrella_sampling_jobs.sh
+29. Wait for the equilibriation of each frame to complete
+#Analysis
+30. The most common analysis conducted for umbrella sampling simulations is the extraction of the potential of mean force (PMF), which will yield the ΔG for the binding/unbinding process. The value of ΔG is simply the difference between the highest and lowest values of the PMF curve, as long as the values of the PMF converge to a stable value at large COM distance. A common method for extracting PMF is the Weighted Histogram Analysis Method (WHAM), included in GROMACS as the wham module.
+31. The input to wham consists of two files, one that lists the names of the .tpr files of each window, and the other that lists the names of either the pullf.xvg or pullx.xvg files from each window. For example, a simple tpr-files.dat might consist of: umbrella0.tpr umbrella1.tpr ... umbrella22.tpr  And analogously for the list of pullf.xvg or pullx.xvg files, in either pullf-files.dat or pullx-files.dat.
+  Note that the files must have unique names (i.e., umbrella0_pullf.xvg, umbrella1_pullf.xvg, etc) or else wham will fail.
+32. List the files in pullf-files.dat in the same manner as tpr-files.dat: umbrella0_pullf.xvg umbrella1_pullf.xvg ... umbrella22_pullf.xvg
+33. We then run gmx wham: gmx wham -it tpr-files.dat -if pullf-files.dat -o -hist -unit kCal . The wham module will then open each of the umbrella*.tpr and umbrella*_pullf.xvg files sequentially and run the WHAM analysis on them. The -unit kCal option indicates that the output will be in kcal mol-1, but you can also get results in kJ mol-1 or kBT.
+34Check the graph and see where the energy plateaus, that's the values of dissociation in kJ mol-1

@@ -1,0 +1,16 @@
+##Introduction##
+  ROSIE (Rosetta Online Server that Includes Everyone) is aweb interface software suite, a molecular modeling software package that provides 3D structure prediction and high-resolution design of proteins and nucleic acids.
+
+##Materials##
+ *ROSIE webserver
+ *For submitting a job in ROSIE, we need to login and register.
+ *Download the pdb files of your desired nonobodies  from Protein Data Bank (click).
+
+##Procedure##
+#Submitting for docking
+  1. In ROSIE docking go for DOCKING 2.
+  2. Give your job a name according to the nano body in Job short description.
+  3. Next submitt your job by uploading  the pdb file of your desired pose. For example in our case we are dealing with nano bodies namely BF10 so we are using different poses for BF10  pdb files nanobodies  and submitting the job.
+  4. In docking partners give list of chains separated by underscore.(A_B) and SUBMIT your job.
+  5. You can see the status of your jobs in QUEUES on the page bar.
+  6. Happy docking!

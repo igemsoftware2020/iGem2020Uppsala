@@ -1,0 +1,18 @@
+##Introduction##
+  How to examine the resulting files from the MD simulation
+
+##Materials##
+ *VMD
+ *All the files from the mdrun
+. gro and .xtc are most important
+
+##Procedure##
+#First things first
+1. make sure you've used trjconv to center the trajectory on your protein to prevent artifacts appearing due to the boundary box
+    check the analysis section of the protein in water tutorial for details
+
+##How to load into VMD##
+2. First create a new molecule, this will be the .gro file you used in the simulation, it's also the input file for the simulation, which seems counterintuitive, but actually it simply uses this starting structure as the first frame
+3. Right click on the molecule you just create, and click load data into molecule
+4. Browse to your .xtc file and load it, it will take some time if you have a lot of frames
+5. Click play and water your protein wiggle!

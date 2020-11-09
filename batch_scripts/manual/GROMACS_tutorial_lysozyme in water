@@ -1,0 +1,109 @@
+##Introduction##
+  Here the GROMACS turtorial for simulating a molecular dynamic (MD) system containing protein in water with ions will be briefly explained with adaptions to our project of analyzing nanobodies.
+  Link to full tutorial:
+    http://www.mdtutorials.com/gmx/lysozyme/index.html
+
+##Materials##
+ *pdb protein file
+    We are using the .pdb files of our nanobodies from primarly swissprot
+    Here refered to as "filename"
+ *Uppmax account
+    hereafter when writning "username" it will refere to your uppmax username since we are working in uppmax all the time.
+ *GROMACS
+ *Github - iGem2020Uppsala/batch_scripts/prot_water
+
+##Procedure##
+#Start-up: Log in to Uppmax and create workspace
+1. Entering the following command with your username in terminal: ssh username@rackham.uppmax.uu.se
+2. Thereafter enter your uppmax password
+3. Make a directory to have as a workspace during the tutorial
+    command to create a directory: mkdir dir_name
+    *dir_name exemple: GROMACS
+
+#Step One: Prepare topology
+4. Activate GROMACS useing the following command: "module load gromacs" or "ml gromacs"
+5. Download a pdb file of the protein you want to target
+    *Use pdb from swissprot
+6. Delete water molecues ("HOH") in your file
+    *Our nanobody pdb shouldn't have crystal waters but it is still good to do 6.1
+    6.1 Take a look at it in some vizualizationprogram (VMD, Chimera, Pymol etc.)
+    6.2 Delete water molecules with the following command:
+    grep -v HOH filname.pdb > filname_clean.pdb
+7. Create gmx-file from pdb-file (pdb2gmx)
+    7.1. Execute: gmx pdb2gmx -f filename_clean.pdb -o filename_processed.gro -water spce
+    7.2. Choose force field 15 (type 15 at command promt and press enter)
+    *Three files should be now in the "GROMACS" directory: filename_processed.gro, topol.top, and posre.itp (Check by typing "ls" in command promt)
+    *"posre.itp" will be used for step six (equilibration)
+
+#Step Two: Examine the topology
+8. OPTIONAL (to know more about the toplogy-files) : Read throuh step two in the GROMACS tutorial linked in the begining of this protocol./
+
+#Step Three: Define box and solvate
+9. Define the dimentions of the box with the following edit configuration command:
+    gmx editconf -f filename_processed.gro -o filename_newbox.gro -c -d 1.0 -bt cubic
+    "-c" = centers the protein in the box, "-d 1.0" = distance from the protein to the edge of the box is 1.0 nm, "-bt cubic" = defines box as a cube
+10. Next command will fill the box with solvent (in our case water):
+    gmx solvate -cp filename_newbox.gro -cs spc216.gro -o filename_solv.gro -p topol.top
+    "-cp" = configuration of protein and is contained in the output of step 8, "-cs" = configuration of solvent and is part of GROMACS standard, "-o" = output and is in this case filename_solv.gro which changes the topology file "topol.top"
+
+#Step Four: Adding ions
+    *Tool to add ions is called genion - it needs a ".tpr" file as input
+    *To make the ".tpr" file a ".mdp" file needs to go through a grompp command
+    *Make sure you have activatade gromacs with ml gromacs!
+11. Create a .mdp file by copypasting a script from github (the scripts in github will be used throughout the entire tutorial)
+  11. 1 write in command promt: nano ion.mdp
+  11. 2 copy the content from github: iGem2020Uppsala/batch_scripts/prot_water/ions.mdp and paste it in the new file (press control+shift+v to paste in commandline)
+  11. 3 press ^X, then Y, then enter to save the changes in the file
+12. Create a .tpr file by using the grompp - command as follows:
+    gmx grompp -f ions.mdp -c filename_solv.gro -p topol.top -o ions.tpr
+13. Check with the command "ls" if the "ion.tpr" has been created in your working directory.
+14. Thereafter use the genion command:
+    gmx genion -s ions.tpr -o filename_solv_ions.gro -p topol.top -pname NA -nname CL -neutral
+    Then enter 13 ("SOL")
+    *For more info about genion read through step four in the tutorial.
+
+#Step Five: Energy Minimization
+  *once agin a ".mdp" file (found in github: iGem2020Uppsala/batch_scripts/prot_water/minim.mdp) will be grompped to make a ".tpr" file (em.tpr)
+  *the "em.tpr" file will be used for the energy minimization which will through sbatch be carried out on Uppmax supercomputer.
+15. Create the minim.mdp by following the same steps as in step 11.
+16. Make a sbatch job with the script mdrun_emin.sh found in github
+    16.1. write in command promt: nano mdrun_emin.
+    16.2. copypaste the mdrun_emin.sh file found in github (iGem2020Uppsala/batch_scripts/prot_water/mdrun_emin.sh)
+    16.3. change "youraccount" after -A on line 3 to "g2020015"
+    16.4. also change "YOURJOBNAME" (line 5) to initials_nanobody_eq  (e.g. MP_A44_emin)
+    16.5. change the cores: first line 12 after "-n" write 10 instead of 20, then in line 22 after "-nt" also write 10 instead of 20
+    16.6. to save and exit: press ^X, then Y, then enter
+    16.7. run the file by the following command: sbatch mdrun_emin.sh
+    *Double check if the job is in the queue: squeue -u username
+    *Check status of job by entering: jobinfo usernameld
+    *the run should be finished in about 1 hours
+17. When the job is done the following files should be listed (check with ls-command in working direktory):
+    em.log: ASCII-text log file of the EM process
+    em.edr: Binary energy file
+    em.trr: Binary full-precision trajectory
+    em.gro: Energy-minimized structure
+18. Analyse the potential energy
+    Type: gmx energy -f em.edr -o potential.xvg
+    then "10 0" to select the potential option
+
+#Step Six and Seven: Equilibration
+  *First the temperature is stabilazed by steps 14-16 when creating the nvt.tpr file
+  *Then the preassure is stabilized through the 17 which is done same as 14-16 but other files.
+19. Create an nvt.mdp file (script is found in github) in workspace
+  *This is done to stablaize the temperature
+    19.1. write in command promt: nano nvt.mdp
+    19.2. copypaste the nvt.mdp file found in github (iGem2020Uppsala/batch_scripts/prot_water/nvt.mdp)
+    19.3. press ^X, then Y, then enter to save the changes in the file
+20. Make a sbatch job as in step five (without changing cores!) with the script mdrun_eq.sh found in github
+    20.1. write in command promt: nano mdrun_eq.sh
+    20.2. copypaste the mdrun_eq.sh file found in github (iGem2020Uppsala/batch_scripts/prot_water/mdrun_eq.sh)
+    20.3. change "youraccount" after -A on line 3 to "g2020015"
+    20.4. also change "YOURJOBNAME" (line 5) to initials_nanobody_eq  (e.g. MP_A44_eq)
+    20.5. to save and exit: press ^X, then Y, then enter
+    20.6. run the file by the following command: sbatch mdrun_eq.sh
+    *Double check if the job is in the queue: squeue -u username
+    *Check status of job by entering: jobinfo usernameld
+    *the run should be finished in about 2 hours
+21. When the job is finsished a new outputfile nvt.tpr is created.
+22. Do the same as for the nvt.mdp file but for the npt.mdp file found in github (iGem2020Uppsala/batch_scripts/prot_water/npt.mdp)
+23. The batch sripct used is also found in github (iGem2020Uppsala/batch_scripts/prot_water/mdrun_eq2.sh)

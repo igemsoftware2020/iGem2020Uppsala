@@ -1,0 +1,28 @@
+##Introduction##
+  Mutates and refines residues and proteins.
+
+##Materials##
+ *Maestro
+ *Docking pose to import(pdb protein file)
+
+##Procedure##
+#One-step-protein prepration
+1. Do one step Protein prep with default settings of your desired docking poses.
+    Import your structure to maestro.
+    Open the one step protein preparation wizard from the tasks button in the top right, or in the toolbar above the workspace navigator.
+    Leave default and click OK. It will be complete and get added to the entry list of current project.
+2. Before scan use SPOTON webserver from Biovinlab to create interface residues.
+3. To open the Residue Scanning panel:
+    Choose Tasks → Biologics → Residue Scanning → Perform Calculations in the main window.
+4. The basic workflow is as follows:
+    Import a structure into the workflow, either from the Workspace or from a Maestro file (Import structure from).
+5. Choose the calculation type. Stability is always calculated, affinity can be calculated if there is more than one chain.
+6. If you chose to calculate affinity, select the chains for one of the partners in the binding affinity calculation.(we are choosing chain A)
+7. Choose the mutations for the residues you want to mutate(choosing mutants from SPOTON results).
+8. Choose Job Settings from the Settings button menu.
+    Set the job parameters in the Job Settings dialog box, and click Run to run the job with the current job settings.
+9. The status bar displays information about the current job settings for the panel. This includes the job name, task name,number of subjobs (if any) and the host name and job incorporation setting. It also displays a message for a short time when you start a new job.
+10. The Job Toolbar is used to make settings for a job and to start it.
+11. In Job name text box enter a name for the job in this text box.
+12. In Job Settings make and save settings for the incorporation of the job into the Maestro project, the job name, the host, the distribution of subjobs, and any other application-specific job settings. We are taking host to be equal to 8 and subjobs to be 1.
+13. Submit the job and see the status in Jobs tab.

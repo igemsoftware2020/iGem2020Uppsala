@@ -1,0 +1,21 @@
+##Introduction##
+  This is the procedure we will use to prepare a protein file for use in other programs
+
+##Materials##
+#maestro
+ *your protein file
+ *hsp16_min.pdb
+
+##Procedure##
+#Maestro Protein Preparation Wizard
+1. Import your structure to maestro using ctr-I or File>Import structures.
+2. Open the protein preparation wizard from the tasks button in the top right, or in the toolbar above the workspace navigator
+3. In the Import and Preprocess tab leave all defaults and click preprocess, once your protein - preprocessed appears in the entry list continue
+4. In the refine tab, leave defaults, and click optimize, wait for it to incorporate as your protein - hbond-opt (complete and get added to the entry list)
+5. Once optimized click remove waters
+6. Once your protein - removed waters appears, click minimize, this step will take a few minutes.
+7. Export your protein using File>Export structures
+8. Name your file your protein min with no spaces
+9. Change extension to .pdb and click save
+
+##Proceed to docking##

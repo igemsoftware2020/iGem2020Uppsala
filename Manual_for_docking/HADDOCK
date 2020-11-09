@@ -1,0 +1,20 @@
+##Introduction##
+  HADDOCK (High Ambiguity Driven protein-protein DOCKing) is an information-driven flexible docking approach for the modeling of biomolecular complexes.
+  HADDOCK can deal with a large class of modeling problems including protein-protein, protein-nucleic acids and protein-ligand complexes
+
+##Materials##
+#HADDOCK Webserver
+ *For submitting a job in HADDOCK 2.4, we need to login and register.
+ *Link For HADDOCK Refinement Interface (click)
+##Procedure##
+#Submitting Jobs
+1. Go to the link mentioned above.
+2. For submitting a job in HADDOCK 2.4, we need to login and register.
+3. After successfully logged in go to the REFINEMENT option on the same menu.
+4. Upload the pdb file of your desired pose you need refinement for. For example in our case we are dealing with three nano bodies namely A44, A50,A23 so we are specific pdb files of these nanobodies and submitting the job.
+5. Give your job a name according to the nano body so you don't mix up.
+6. Next upload your pdb file and continue with default setting click NEXT.
+7. In HADDOCK Refinement Interface go with all the default options of Chain # and Molecule type.
+8. Also for CLUSTERING let it be FCC and the CUT OFF  and MAX CLUSTER SIZE also should be left as the software suggests
+9. And SUBMIT your job.
+10. You can see the status and your job queues on the main page in the WORKSPACE bar.
